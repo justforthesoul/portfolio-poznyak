@@ -1,0 +1,7 @@
+mixin icon(name, className, width, height)
+  - var icon = require(`images/icons/${name}.svg`);
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none" width=width height=height)
+    use(xlink:href=icon.url)
+
+mixin image(path, className, width, height)
+  img(src=require(`images/${path}`) class=className width=width height=height)

@@ -1,0 +1,15 @@
+form.form(method="post")
+        .form__present-wrapper
+            label.form__input-title(for="form-name") Введите ваше имя
+            input#form-name.form__input(type="text" name="name" placeholder="Ковальчук Дмитрий" required="")
+            +icon("user", "form__icon form__icon--present", width="30", height="30")
+        .form__email-wrapper
+            label.form__input-title(for="form-email") Введите ваш email
+            input#form-email.form__input(type="email" name="email" placeholder="loftschool@study.com" required="")
+            +icon("envelope", "form__icon form__icon--email", width="30", height="30")
+        .form__message-wrapper
+            label.form__input-title(for="form-message") Сообщение к письму
+            textarea#form-message.form__input(name="message" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" required="")
+            +icon("message", "form__icon form__icon--message", width="30", height="30")
+        .form__send-wrapper
+            button.form__send-btn(type="submit") Отправить

@@ -1,0 +1,145 @@
+.skills {
+    padding-top: 405px;
+}
+
+.skills__wrapper {
+    position: relative; 
+    overflow: hidden;
+}
+
+.skills__specification::before {
+    content: '';  
+    position: absolute;
+    width: 600px;
+    height: 100%;
+    background-image: url("~images/content/backpack.png");
+    background-repeat: no-repeat;
+    right: 63%;
+    top: 80px;
+}
+
+.skills__title {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #414c63;
+}
+
+.skills__specification {
+    padding-top: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.skills__description {
+    margin-bottom: 50px;
+    width: 590px;
+    color: #a0a5b1;
+    font-weight: 500;
+    line-height: 30px;
+    margin-left: 7%;
+}
+.skills__specification-item {
+    margin-left: 31.5%;
+}
+
+.skills__specification-title {
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-top: 26px;
+}
+
+.skills__visualization {
+    display: flex;
+    padding-left: 20px;
+    padding-top: 25px;
+}
+
+.skills__visualization-item {
+    position: relative;
+    margin-right: 47px;
+}
+
+.skills__visualization-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
+    font-size: 18px;
+    font-weight: 700;
+    color: #a0a5b1;
+}
+
+.skills__visualization-title--jquery {
+    text-align: center;
+    top: 30%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.skills__percentage-ratio {
+    transform: rotate(-180deg);
+}
+
+.skills__circle-under {
+    fill: transparent;
+    stroke-width: 7px;
+    stroke: #eaeaea;
+}
+
+.skills__circle-above {
+    fill: transparent;
+    stroke-width: 14px;
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+    animation: fill 100s linear;
+    animation-play-state: paused;
+}
+
+.skills__circle-above--html {
+    animation-delay: -25s;
+}
+
+.skills__circle-above--css {
+    animation-delay: -13s;
+}
+
+.skills__circle-above--javascript {
+    animation-delay: -75s;
+}
+
+.skills__circle-above--jquery {
+    animation-delay: -25s;
+}
+
+.skills__circle-above--git {
+    animation-delay: -13s;
+}
+
+.skills__circle-above--terminal {
+    animation-delay: -25s;
+}
+
+.skills__circle-above--gulp {
+    animation-delay: -50s;
+}
+
+.skills__circle-above--webpack {
+    animation-delay: -38s;
+}
+
+@keyframes fill {
+    from {
+        stroke-dasharray: 270; 
+    }
+
+    to {
+        stroke-dasharray: 540;
+    }
+}

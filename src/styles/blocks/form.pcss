@@ -1,0 +1,160 @@
+.form {
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 8.9%;
+  width: 875px;
+}
+
+.form__present-wrapper {
+  position: relative;
+  flex-basis: 47.7%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 10px;
+}
+
+.form__email-wrapper {
+  position: relative;
+  flex-basis: 47.7%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 10px;
+}
+
+.form__message-wrapper {
+  position: relative;
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 9px;
+  padding-top: 32px;
+
+  .form__input[placeholder] {
+    padding-right: 370px;
+    line-height: 35px;
+  }
+}
+
+.form__input-title {
+  flex-basis: 100%;
+  padding-left: 45px;
+  color: #c4c8d0;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.form__icon {
+  position: absolute;
+  fill: #c4c8d0;
+  top: 45px;
+  transition: fill 0.3s;
+}
+
+.form__icon--message {
+  top: 83px;
+}
+
+.form__present-input,
+.form__email-input,
+.form__message {
+  border: none;
+  border-bottom: 1px solid #414c63;
+  flex-basis: 100%;
+}
+
+.form__input {
+  border: none;
+  border-bottom: 1px solid #414c63;
+  flex-basis: 100%;
+  background-color: transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid #5500f2;
+    transition: border-bottom 0.3s;
+  }
+}
+
+.form__input[placeholder] {
+  padding-left: 44px;
+  padding-bottom: 15px;
+  color: #414c63;
+  padding-top: 14px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.form__send-btn {
+  outline: none;
+  margin-top: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 30px 118px;
+  background: linear-gradient(to right, #9a00ff 10%, #5900ff 50%, #5900ff 100%);
+  border-top-left-radius: 37px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 37px;
+  border-bottom-left-radius: 6px;
+}
+
+.form__send-btn {
+  box-shadow: none;
+  transition: box-shadow 0.3s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px 1px #5900ff;
+    transition: box-shadow 0.3s;
+  }
+}
+
+.form__input {
+  border: none;
+  border-bottom: 1px solid #414c63;
+  flex-basis: 100%;
+  background-color: transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid #5500f2;
+    transition: border-bottom 0.3s;
+  }
+}
+
+.form__present-wrapper .form__input:hover + .form__icon {
+    fill: #5500f2;
+    transition: fill 0.3s;
+}
+
+.form__present-wrapper .form__input:focus + .form__icon {
+    fill: #5500f2;
+    transition: fill 0.3s;
+}
+
+.form__email-wrapper .form__input:hover + .form__icon {
+    fill: #5500f2;
+    transition: fill 0.3s;
+}
+
+.form__email-wrapper .form__input:focus + .form__icon {
+    fill: #5500f2;
+    transition: fill 0.3s;
+}
+
+.form__message-wrapper .form__input:hover + .form__icon {
+    fill: #5500f2;
+    transition: fill 0.3s;
+}
+
+.form__message-wrapper .form__input:focus + .form__icon {
+    fill: #5500f2;
+    transition: fill 0.3s;
+}
