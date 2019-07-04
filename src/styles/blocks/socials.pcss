@@ -1,101 +1,92 @@
-.social-list--header {
+.socials {
   display: flex;
-  justify-content: space-around;
-  padding-right: 2.6%;
-  padding-top: 63px;
-  .social__circle-svg {
-    display: none;
-  }
+  align-items: center;
 }
 
-.social-list--footer {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 59%;
-  padding-left: 15px;
-  fill: #56585d;
-  transition: fill 0.5s;
-
-  &:hover {
-    fill: #5400f3;
-    transition: fill 0.5s;
-  }
-}
-
-.social-list--footer .social__icon {
-  fill: #56585d;
-  transition: fill 0.5s;
-  &:hover {
-    fill: #5400f3;
-    transition: fill 0.5s;
-  }
-}
-
-.social__link {
+.socials__link {
   outline: none;
   position: relative;
 }
 
-.social-list--header .social-item {
-  padding-left: 40px;
+.socials__item:nth-child(1),
+.socials__item:nth-child(2) {
+  padding-right: 40px;
 }
 
-.social-list--header .social__icon {
-  fill: #414c63;
-  transition: fill 0.5s;
+.socials--header {
+  .socials__circle-svg {
+    display: none;
+  }
 }
 
-.social__link:hover,
-.social__link:focus {
-  .social__icon {
-    fill: #5400f3;
+.socials__link:hover,
+.socials__link:focus {
+  .socials__icon {
+    fill: #5400f2;
     transition: fill 0.5s;
   }
-  .social__circle {
-      stroke: #5400f3;
+  .socials__circle {
+      stroke: #5400f2;
       transition: stroke 0.5s;
     }
 }
 
-.social-list--footer {
-  .social__icon {
-    width: 23px;
-    height: 23px;
-  }
-
-  .social__link--instagram .social__icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .social__link--vkontakte .social__icon {
-    width: 25px;
-    height: 25px;
-  }
-}
-
-.social__circle-svg {
+.socials__circle-svg {
   position: absolute;
   fill: transparent;
 
-  .social__circle {
+  .socials__circle {
     stroke-width: 3px;
     stroke: #414c63;
     transition: stroke 0.5s;
   }
 }
 
-.social__link--instagram .social__circle-svg {
+.socials--footer .socials__icon{
+  fill: #56585d;
+  transition: fill 0.5s;
+}
+
+.socials--header .socials-item {
+  padding-left: 40px;
+}
+
+.socials--header .socials__icon {
+  fill: #414c63;
+  transition: fill 0.5s;
+}
+
+
+
+.socials--footer {
+  .socials__icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .socials__link--instagram .socials__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .socials__link--vkontakte .social__icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+.socials__link--instagram .socials__circle-svg {
   top: -18px;
   left: -16px;
 }
 
-.social__link--vkontakte .social__circle-svg {
+.socials__link--vkontakte .socials__circle-svg {
   top: -21px;
   left: -12px;
 }
 
-.social__link--github .social__circle-svg {
+.socials__link--github .socials__circle-svg {
   top: -20px;
   left: -14px;
 }

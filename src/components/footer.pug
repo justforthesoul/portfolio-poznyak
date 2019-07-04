@@ -1,17 +1,18 @@
 footer.footer
-    .footer__author
-        .footer__year &copy&nbsp;2019
-        .footer__autor-information
-            .footer__name Павел Позняк
-            .footer__description Личный сайт веб&nbsp;-&nbsp;разработчика
-    .footer__content
-        include main-menu
-        +main-menu("footer")
-        .footer__block
-            p.footer__text Этот сайт я сделал в рамках обучения в Школе&nbsp;онлайн&nbsp;образования Loftschool
-            .footer__socials
-                include socials
-                +socials("footer")
-        .footer__block
-            p.footer__blockquote-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
-            cite.footer__blockquote-author Martin Golding
+    .container
+        .footer__author
+            .footer__year &copy&nbsp;2019
+            .footer__autor-information
+                .footer__name Павел Позняк
+                .footer__description Личный сайт веб&nbsp;-&nbsp;разработчика
+        .footer__content
+            include main-menu
+            +main-menu("footer")
+            .footer__block
+                p.footer__text Этот сайт я сделал в рамках обучения в Школе&nbsp;онлайн&nbsp;образования Loftschool
+                .footer__socials
+                    include socials
+                    +socials("footer")
+            .footer__block
+                p.footer__blockquote-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                cite.footer__blockquote-author Martin Golding
