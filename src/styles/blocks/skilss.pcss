@@ -1,67 +1,73 @@
-.skills {
+.skills__wrapper {
     padding-top: 405px;
 }
 
-.skills__wrapper {
+.skills {
     position: relative; 
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: flex-end;
+    text-align: left;
 }
 
-.skills__specification::before {
+.skills__wrapper--text {
+    padding-left: 8.2%;
+    align-self: center;
+}
+
+.skills__description {
+    margin-bottom: 50px;
+    color: "text-color";
+    opacity: .5;
+    font-weight: 600;
+    line-height: 30px;
+    padding-top: 50px;
+}
+
+.skills:before {
     content: '';  
     position: absolute;
     width: 600px;
     height: 100%;
     background-image: url("~images/content/backpack.png");
     background-repeat: no-repeat;
-    right: 63%;
-    top: 80px;
+    right: 970px;
+    top: 45%;
+}
+
+.skills__specification-item {
+    padding-right: 89px;
 }
 
 .skills__title {
     padding-top: 5px;
-    text-align: center;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
-    color: #414c63;
-}
-
-.skills__specification {
-    padding-top: 50px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-
-.skills__description {
-    margin-bottom: 50px;
-    width: 590px;
-    color: #a0a5b1;
-    font-weight: 500;
-    line-height: 30px;
-    margin-left: 7%;
-}
-.skills__specification-item {
-    margin-left: 31.5%;
+    color: "text-color";
 }
 
 .skills__specification-title {
     font-size: 24px;
     line-height: 48px;
     font-weight: 700;
-    padding-left: 20px;
     padding-top: 26px;
 }
 
 .skills__visualization {
     display: flex;
-    padding-left: 20px;
     padding-top: 25px;
 }
 
 .skills__visualization-item {
     position: relative;
+}
+
+.skills__visualization-item:nth-child(1),
+.skills__visualization-item:nth-child(2),
+.skills__visualization-item:nth-child(3) {
     margin-right: 47px;
 }
 
@@ -81,65 +87,4 @@
     top: 30%;
     padding-left: 40px;
     padding-right: 40px;
-}
-
-.skills__percentage-ratio {
-    transform: rotate(-180deg);
-}
-
-.skills__circle-under {
-    fill: transparent;
-    stroke-width: 7px;
-    stroke: #eaeaea;
-}
-
-.skills__circle-above {
-    fill: transparent;
-    stroke-width: 14px;
-    stroke-dasharray: 270;
-    stroke-dashoffset: 270;
-    animation: fill 100s linear;
-    animation-play-state: paused;
-}
-
-.skills__circle-above--html {
-    animation-delay: -25s;
-}
-
-.skills__circle-above--css {
-    animation-delay: -13s;
-}
-
-.skills__circle-above--javascript {
-    animation-delay: -75s;
-}
-
-.skills__circle-above--jquery {
-    animation-delay: -25s;
-}
-
-.skills__circle-above--git {
-    animation-delay: -13s;
-}
-
-.skills__circle-above--terminal {
-    animation-delay: -25s;
-}
-
-.skills__circle-above--gulp {
-    animation-delay: -50s;
-}
-
-.skills__circle-above--webpack {
-    animation-delay: -38s;
-}
-
-@keyframes fill {
-    from {
-        stroke-dasharray: 270; 
-    }
-
-    to {
-        stroke-dasharray: 540;
-    }
 }
