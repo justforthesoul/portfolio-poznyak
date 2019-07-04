@@ -1,40 +1,5 @@
-section.works
-    .container
+section.works.works__wrapper
+    .container.works__section
         h2.works__title Мои работы
-        .works__wrapper
-            .works__slider
-                .works__slider-number 4
-                .works__slider-background
-                    //.works__background-img.works__background-img--car
-                    //.works__background-img.works__background-img--house
-                    //.works__background-img.works__background-img--green
-                    .works__background-wrapper
-                        +image("previews/winter.png", "works__background-img works__background-img--winter")
-                ul.works__slider-list
-                    li.works__slider-item
-                        a.works__slider-link(href="" aria-label="Работа 1")
-                            +image("previews/car-min.png", "works__slider-preimg works__slider-preimg--car", width="178", height="100")
-                    li.works__slider-item
-                        a.works__slider-link(href="" aria-label="Работа 2")
-                            +image("previews/house-min.png", "works__slider-preimg works__slider-preimg--house", width="178", height="100")
-                    li.works__slider-item
-                        a.works__slider-link(href="" aria-label="Работа 3")
-                            +image("previews/green-min.png", "works__slider-preimg works__slider-preimg--green", width="178", height="100")
-                    li.works__slider-item
-                        a.works__slider-link(href="" aria-label="Работа 4")
-                            +image("previews/winter-min.png", "works__slider-preimg works__slider-preimg--winter", width="178", height="100")
-                .works__slider-controls
-                    button.works__btn.works__btn--prev(href="" aria-label="Предыдущий")
-                        +icon("arrow-down", "works__btn-icon", width="10", height="10")
-                    button.works__btn.works__btn--next(href="" aria-label="Следующий")
-                        +icon("arrow-down", "works__btn-icon", width="10", height="10")
-            .works__advertising
-                .works__skills-list
-                    p.works__skills-item HTML
-                    p.works__skills-item CSS
-                    p.works__skills-item Javascript
-                h2.works__advertising-title Сайт школы образования
-                p.works__advertising-information Этот парень проходил обучение веб&nbsp;-&nbsp;разработке не где-то, а в LoftSchool!&nbsp;2 месяца только самых тяжелых испытаний&nbsp;и&nbsp;бессонных ночей!
-                .works__advertising-wrapper
-                    +icon("link", "works__advertising-icon", width="15", height="15")
-                    a.works__advertising-link(href="") Посмотреть сайт
+        .works__content
+            include works-slider
