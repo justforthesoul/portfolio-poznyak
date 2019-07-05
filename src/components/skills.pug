@@ -1,57 +1,59 @@
-section.skills.skills__wrapper.container
-        .skills__wrapper--text
-            h2.skills__title Чем я могу быть полезен вам
-            .skills__description
-                p 
-                    | Этот сайт я сделал в рамках обучения в Школе онлайн образования 
-                    br 
-                    | LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, 
-                    br
-                    | как тут всё классно и красиво!
-        ul.skills__specification-list
-            li.skills__specification-item
-                h3.skills__specification-title Front-end
-                .skills__visualization
-                    .skills__visualization-item
-                        .skills__visualization-elem
-                            include skill-circle
-                            +skill-circle("html")
-                        .skills__visualization-title.skills__visualization-title--html HTML5
-                    .skills__visualization-item
-                        .skills__visualization-elem
-                            include skill-circle
-                            +skill-circle("css")
-                        .skills__visualization-title.skills__visualization-title--css CSS3
-                    .skills__visualization-item
-                        .skills__visualization-elem
-                            include skill-circle
-                            +skill-circle("javascript")
-                        .skills__visualization-title.skills__visualization-title--javascript Javascript
-                    .skills__visualization-item
-                        .skills__visualization-elem
-                            include skill-circle
-                            +skill-circle("jquery")
-                        .skills__visualization-title.skills__visualization-title--jquery Jquery и Vue.js
-            li.skills__specification-item
-                h3.skills__specification-title Workflow
-                .skills__visualization    
-                    .skills__visualization-item
-                        .skills__visualization-elem
-                            include skill-circle
-                            +skill-circle("git")
-                        .skills__visualization-title.skills__visualization-title--git Git
-                    .skills__visualization-item
-                        .skills__visualization-elem
-                            include skill-circle
-                            +skill-circle("terminal")
-                        .skills__visualization-title.skills__visualization-title--terminal Terminal
-                    .skills__visualization-item
-                        .skills__visualization-elem
-                            include skill-circle
-                            +skill-circle("gulp")
-                        .skills__visualization-title.skills__visualization-title--gulp Gulp
-                    .skills__visualization-item
-                        .skills__visualization-elem
-                            include skill-circle
-                            +skill-circle("webpack")
-                        .skills__visualization-title.skills__visualization-title--webpack Webpack
+section.skills
+    .container
+        .skills__wrapper
+            .skills__wrapper--text
+                h2.skills__title Чем я могу быть полезен вам
+                .skills__description
+                    p 
+                        | Этот сайт я сделал в рамках обучения в Школе онлайн образования 
+                        br 
+                        | LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, 
+                        br
+                        | как тут всё классно и красиво!
+            ul.skills__specification-list
+                li.skills__specification-item
+                    h3.skills__specification-title Front-end
+                    .skills__visualization
+                        .skills__visualization-item
+                            .skills__visualization-elem
+                                include skill-circle
+                                +skill-circle("html")
+                            .skills__visualization-title.skills__visualization-title--html HTML5
+                        .skills__visualization-item
+                            .skills__visualization-elem
+                                include skill-circle
+                                +skill-circle("css")
+                            .skills__visualization-title.skills__visualization-title--css CSS3
+                        .skills__visualization-item
+                            .skills__visualization-elem
+                                include skill-circle
+                                +skill-circle("javascript")
+                            .skills__visualization-title.skills__visualization-title--javascript Javascript
+                        .skills__visualization-item
+                            .skills__visualization-elem
+                                include skill-circle
+                                +skill-circle("jquery")
+                            .skills__visualization-title.skills__visualization-title--jquery Jquery и Vue.js
+                li.skills__specification-item
+                    h3.skills__specification-title Workflow
+                    .skills__visualization    
+                        .skills__visualization-item
+                            .skills__visualization-elem
+                                include skill-circle
+                                +skill-circle("git")
+                            .skills__visualization-title.skills__visualization-title--git Git
+                        .skills__visualization-item
+                            .skills__visualization-elem
+                                include skill-circle
+                                +skill-circle("terminal")
+                            .skills__visualization-title.skills__visualization-title--terminal Terminal
+                        .skills__visualization-item
+                            .skills__visualization-elem
+                                include skill-circle
+                                +skill-circle("gulp")
+                            .skills__visualization-title.skills__visualization-title--gulp Gulp
+                        .skills__visualization-item
+                            .skills__visualization-elem
+                                include skill-circle
+                                +skill-circle("webpack")
+                            .skills__visualization-title.skills__visualization-title--webpack Webpack
