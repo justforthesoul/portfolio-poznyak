@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   );
   function moveMoutainsLayerOnScroll(wScroll) {
     mountainLayers.forEach(layer => {
-      if (wScroll <= 1540) {
+      if (wScroll <= 1700) {
         const divider = layer.dataset.speed;
-        const strafe = (wScroll * divider) / 1200;
+        const strafe = (wScroll * divider) / 1500;
         layer.style.transform = `translateY(-${strafe}%)`;
       }
     });

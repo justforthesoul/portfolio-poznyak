@@ -4,8 +4,38 @@
   font-weight: 600;
   padding-top: 3px;
   color: #939baa;
-  width: 550px;
-  margin-left: 141px;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 75px;
+  }
+  @include tablets {
+    padding-top: 41px;
+    font-size: 14px;
+    flex-basis: 100%;
+    padding-left: 0;
+  }
+}
+
+.about-information {
+  width: 70%;
+  padding-left: 141px;
+
+  @include desktopHd {
+    padding-left: 130px;
+    padding-right: 100px;
+  }
+
+  @include desktop {
+    padding-left: 80px;
+    padding-right: 0;
+  }
+
+  @include tablets {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 .user-information__title {
@@ -18,10 +48,32 @@
   line-height: 48px;
   font-weight: 900;
   padding-top: 15px;
+
+  @include desktop {
+    padding-top: 10px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @include tablets {
+    padding-top: 11px;
+    padding-right: 100px;
+  }
 }
 
 .user-information__about-developer {
   padding-top: 27px;
+
+  @include desktop {
+    padding-top: 45px;
+    line-height: 24px;
+  }
+
+  @include tablets {
+    line-height: 24px;
+    padding-top: 39px;
+    padding-right: 10px;
+  }
 }
 
 .user-information__about-site {
@@ -40,5 +92,26 @@
     background-image: url("~images/content/star.png");
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  @include desktop {
+    padding-top: 36px;
+    line-height: 24px;
+     padding-right: 15px;
+
+     &:before {
+      top: 35px;
+      left: -40px;
+    }
+  }
+
+  @include tablets {
+    padding-top: 40px;
+    padding-right: 20px;
+
+    &:before {
+      top: 40px;
+      left: -40px;
+    }
   }
 }

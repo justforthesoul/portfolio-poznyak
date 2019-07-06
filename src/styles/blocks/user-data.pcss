@@ -1,25 +1,85 @@
-.user-data {
-    width: 290px;
+.about__data {
+  width: 30%;
+
+  @include tablets {
+    width: 100%;
+    
+  }
+}
+
+.user__data {
+  display: flex;
+  flex-wrap: wrap;
+  @include tablets {
+    flex-basis: 100%;
+  }
+}
+
+.user-data__pic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .user-data__img {
-    border-radius: 50%;
-    margin-left: 77px;
+  border-radius: 50%;
+  margin-left: 77px;
+  margin-top: 5px;
+
+  @include desktopHd {
+    margin-left: 20px;
+  }
+
+  @include desktop {
     margin-top: 5px;
+    margin-right: auto;
+    margin-left: 0;
+    width: 170px;
+    height: 170px;
+  }
+
+  @include tablets {
+    margin-left: 35px;
+  }
 }
 
 .user-data__table {
-    padding-top: 58px;
+  padding-top: 58px;
+
+  @include desktop {
+    padding-top: 46px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include tablets {
+    padding-top: 18px;
+    padding-left: 2px;
+  }
 }
 
 .user-data__table-title {
-    padding-top: 15px;
-    font-weight: 600;
-    color: #c3c5d0;
+  padding-top: 15px;
+  font-weight: 600;
+  color: #c3c5d0;
+
+  @include desktop {
+    padding-top: 6px;
+  }
 }
 
 .user-data__table-discription {
-    padding-top: 15px;
-    padding-left: 73px;
+  padding-top: 15px;
+  padding-left: 73px;
+  font-weight: 600;
+
+  @include desktop {
+    padding-top: 7px;
+    padding-left: 31px;
     font-weight: 600;
+  }
+
+  @include tablets {
+    padding-left: 55px;
+  }
 }
