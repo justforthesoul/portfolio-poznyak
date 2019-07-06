@@ -1,18 +1,22 @@
 .scroll {
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
 .scroll--welcome {
-  margin-top: 330px;
+  margin-top: 325px;
+
+  @include desktop {
+    display: none;
+  } 
 }
 
 .scroll__link {
   font-size: 18px;
   line-height: 30px;
   font-weight: 600;
-  padding-right: 50px;
+  padding-right: 55px;
+  position: relative;
 
   &:after {
     content: "";
@@ -23,7 +27,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.8;
-    right: 46.5%;
+    right: 10px;
     top: -2px;
   }
 }

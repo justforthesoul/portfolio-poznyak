@@ -7,4 +7,13 @@
 
 .logo__link {
     text-decoration: none;
+    outline: none;  
+    @include tablets {
+    padding-left: 3px;
+  }  
+
+  &:focus,
+  &:hover {
+    color: #5400f3;
+  }
 }

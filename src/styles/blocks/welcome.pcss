@@ -1,23 +1,83 @@
 .welcome__section {
-    margin-top: 310px;
+  margin-top: 310px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @include desktopHd {
+    align-items: flex-start;
+    margin-top: 260px;
+  }
+
+  @include desktop {
+    margin-top: 175px;
+    align-items: center;
+  }
+
+  @include tablets {
+    margin-top: 125px;
+  }
 }
 
 .welcome {
-    text-align: center;
-    padding-left: 15px;
+  text-align: center;
 }
 
 .welcome__title {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 600;
-    color: "text-color";
-    opacity: .5;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  color: "text-color";
+  opacity: 0.5;
+  flex-basis: 100%;
+
+  @include desktopHd {
+    flex-basis: 36%;
+    text-align: right;
+  }
+
+  @include desktop {
+    text-align: center;
+    font-size: 16px;
+    line-height: 28px;
+    flex-basis: 100%;
+  }
+
+  @include tablets {
+    font-size: 14px;
+    line-height: 24px;
+    flex-basis: 100%;
+  }
 }
 
 .welcome__developer-name {
-    font-size: 72px;
-    line-height: 60px;
-    font-weight: 900;
-    padding-top: 23px;
+  font-size: 72px;
+  line-height: 60px;
+  font-weight: 900;
+  padding-top: 23px;
+  flex-basis: 100%;
+
+  @include desktopHd {
+    flex-basis: 63%;
+    text-align: left;
+    padding-top: 0;
+    padding-left: 55px;
+  }
+
+  @include desktop {
+    text-align: center;
+    padding-top: 19px;
+    font-size: 48px;
+    line-height: 48px;
+    flex-basis: 100%;
+    padding-left: 0;
+  }
+
+  @include tablets {
+    padding-top: 2px;
+    font-size: 36px;
+    line-height: 49px;
+    flex-basis: 100%;
+  }
 }
