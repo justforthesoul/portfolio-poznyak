@@ -3,17 +3,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const mountainLayers = parallaxMountain.querySelectorAll(
     ".parallax-mountain__layer"
   );
-  console.log(mountainLayers);
-  function moveMoutaisLayerOnScroll(wScroll) {
+  function moveMoutainsLayerOnScroll(wScroll) {
     mountainLayers.forEach(layer => {
-      const divider = layer.dataset.speed;
-      const strafe = (wScroll * divider) / 1200;
-      layer.style.transform = `translateY(-${strafe}%)`;
+      if (wScroll <= 1700) {
+        const divider = layer.dataset.speed;
+        const strafe = (wScroll * divider) / 1500;
+        layer.style.transform = `translateY(-${strafe}%)`;
+      }
     });
   }
 
   window.addEventListener("scroll", e => {
     const wScroll = window.pageYOffset;
-    moveMoutaisLayerOnScroll(wScroll);
+    moveMoutainsLayerOnScroll(wScroll);
   });
 });

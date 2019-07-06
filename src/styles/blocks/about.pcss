@@ -1,5 +1,20 @@
 .about__wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
   margin-top: 159px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  
+  @include desktopHd {
+    margin-top: 390px;
+  }
+
+  @include desktop {
+    margin-top: 500px;
+  }
+
+  @include tablets {
+    margin-top: 270px;
+  }
 }

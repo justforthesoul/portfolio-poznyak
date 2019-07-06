@@ -1,0 +1,25 @@
+script(type="text/x-template")#skills-list
+    ul.skills
+        li.skills__item(v-for="skill in skills")
+            row(
+                :skill="skill"
+            )
+
+script(type="text/x-template")#skills-row
+    .skills-row
+        .skills-row__title Frontend
+        ul.skills-row__list
+            -   for (var j = 0; j < 4; j++)
+                li.skills-row__item
+                    skill
+
+script(type="text/x-template")#skill
+    .skill
+        svg(viewbox='0 0 100 100' preserveaspectratio='none' width='155' height='155').skill__circle-shape
+            defs
+                lineargradient#gradient(x1='0' y1='0' x2='100%' y2='0')
+                    stop(offset='0%' style='stop-color: #5500f2')
+                    stop(offset='50%' style='stop-color: #8f00ef')
+            circle.skill-circle__under(cx='50' cy='50' r='43')
+            circle(class="skill-circle__above skill-circle__above--" + mod)(cx='50' cy='50' r='43' stroke="url(#gradient)")
+        .skill__circle-text Html        
