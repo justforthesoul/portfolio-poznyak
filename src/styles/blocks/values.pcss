@@ -1,0 +1,237 @@
+.values {
+  overflow: hidden;
+}
+
+.values__wrapper {
+  position: relative;
+  margin-top: 405px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: left;
+  padding-left: 55px;
+  @include desktopHd {
+    margin-top: 387px;
+  }
+
+  @include desktop {
+    margin-top: 251px;
+  }
+}
+
+.values__wrapper-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-basis: 70%;
+  padding-left: 20px;
+
+  @include desktopHd {
+    flex-basis: 78.5%;
+  }
+
+  @include desktop {
+    justify-content: center;
+    flex-basis: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  @include tablets {
+  }
+}
+
+.values__description {
+  flex-basis: 60%;
+
+  @include desktopHd {
+    flex-basis: 75%;
+  }
+
+  @include desktop {
+  }
+
+  @include tablets {
+  }
+}
+
+.values__widget {
+  flex-basis: 70%;
+  padding-left: 140px;
+
+  @include desktopHd {
+    padding-left: 15px;
+  }
+
+  @include desktop {
+  }
+
+  @include tablets {
+  }
+}
+
+.values__title {
+  padding-top: 5px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: "text-color";
+
+  @include desktop {
+    padding-left: 120px;
+    padding-right: 160px;
+  }
+}
+
+.values__description {
+  margin-bottom: 50px;
+  color: "text-color";
+  opacity: 0.5;
+  font-weight: 600;
+  line-height: 30px;
+  padding-top: 50px;
+  max-width: 670px;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 18px;
+    padding-right: 40px;
+  }
+}
+
+.values__wrapper:before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 100%;
+  background-image: url("~images/content/backpack.png");
+  background-repeat: no-repeat;
+  right: 970px;
+  top: 15.5%;
+
+  @include desktopHd {
+    right: 0;
+    left: -210px;
+    top: 18%;
+  }
+
+  @include desktop {
+    width: 250px;
+    background-size: contain;
+    right: 0;
+    left: 220px;
+    top: 54%;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include desktopHd {
+  }
+
+  @include desktop {
+  }
+
+  @include tablets {
+  }
+}
+
+.skills-row__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-basis: 100%;
+  max-width: 800px;
+
+  @include desktopHd {
+  }
+
+  @include desktop {
+  }
+
+  @include tablets {
+  }
+}
+
+.skills-row__title {
+  padding-top: 50px;
+}
+
+.skills-row__title {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  padding-top: 1.425rem;
+
+  @include desktopHd {
+  }
+
+  @include desktop {
+  }
+
+  @include tablets {
+  }
+}
+
+.skills__item {
+  flex-basis: 100%;
+  margin-right: 90px;
+  margin-left: 5px;
+
+  @include desktopHd {
+    margin-right: 40px;
+  }
+
+  @include desktop {
+  }
+
+  @include tablets {
+  }
+}
+
+.skills-row {
+  padding-top: 3px;
+}
+
+.slills-row__item {
+  flex-basis: 25%;
+}
+
+.skill__circle-shape {
+  fill: transparent;
+}
+
+.skill-circle__under {
+  stroke-width: 7px;
+  stroke: #eaeaea;
+}
+
+.skill-circle__above {
+  stroke-width: 14px;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+}
+
+.skill {
+  position: relative;
+  width: 165px;
+  height: 165px;
+}
+
+.skill__circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 700;
+  color: #a0a5b1;
+  text-align: center;
+  padding-left: 42px;
+  padding-right: 42px;
+}

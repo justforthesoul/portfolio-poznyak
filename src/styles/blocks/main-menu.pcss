@@ -3,9 +3,30 @@
   flex-wrap: wrap;
   padding-top: 3px;
   padding-left: 55px;
+}
 
+.main-menu--header {
   @include desktop {
     display: none;
+  }
+}
+
+.main-menu--popap {
+  .main-menu__list {
+    flex-direction: column;
+    padding-top: 200px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .main-menu__item {
+    padding-top: 27px;
+    padding-left: 13px;
+  }
+
+  @include tablets {
+    .main-menu__list {
+    padding-top: 160px;
+  }
   }
 }
 
@@ -31,7 +52,6 @@
     padding-top: 0;
     padding-left: 0;
   }
-
   .main-menu__item:nth-child(6) {
     padding-right: 0;
   }
