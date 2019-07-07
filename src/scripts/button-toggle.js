@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    const togglBtn = document.querySelector(".button-toggle__btn");
-    togglBtn.addEventListener("click", function() {
-        if (togglBtn.classList.contains("button-toggle__btn--calm")) {
-            togglBtn.classList.remove("button-toggle__btn--calm");
-            togglBtn.classList.add("button-toggle__btn--active");
-          } else {
-            togglBtn.classList.add("button-toggle__btn--calm");
-            togglBtn.classList.remove("button-toggle__btn--active");
-          }
-    });
-
+  let togglBtn = document.querySelector(".button-toggle__btn");
+  let popapMenu = document.querySelector(".popap-menu");
+  togglBtn.addEventListener("click", function() {
+    if (togglBtn.classList.contains("button-toggle__btn--calm")) {
+      togglBtn.classList.remove("button-toggle__btn--calm");
+      togglBtn.classList.add("button-toggle__btn--active");
+      popapMenu.classList.remove("js-hidden");
+      //document.body.style.overflow = "hidden";
+    } else {
+      togglBtn.classList.add("button-toggle__btn--calm");
+      togglBtn.classList.remove("button-toggle__btn--active");
+      popapMenu.classList.add("js-hidden");
+      // document.body.style.overflow = "auto";
+    }
+  });
 });

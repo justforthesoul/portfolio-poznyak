@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     mountainLayers.forEach(layer => {
       if (wScroll <= 1700) {
         const divider = layer.dataset.speed;
-        const strafe = (wScroll * divider) / 1500;
+        const strafe = (wScroll * divider) / 2000;
         layer.style.transform = `translateY(-${strafe}%)`;
       }
     });
