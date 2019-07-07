@@ -1,5 +1,9 @@
 .values {
   overflow: hidden;
+
+  @include desktop {
+    overflow: visible;
+  }
 }
 
 .values__wrapper {
@@ -15,7 +19,13 @@
   }
 
   @include desktop {
-    margin-top: 251px;
+    margin-top: 258px;
+    padding-left: 0;
+  }
+
+  @include tablets {
+    margin-top: 230px;
+    justify-content: center;
   }
 }
 
@@ -38,35 +48,8 @@
   }
 
   @include tablets {
-  }
-}
-
-.values__description {
-  flex-basis: 60%;
-
-  @include desktopHd {
-    flex-basis: 75%;
-  }
-
-  @include desktop {
-  }
-
-  @include tablets {
-  }
-}
-
-.values__widget {
-  flex-basis: 70%;
-  padding-left: 140px;
-
-  @include desktopHd {
-    padding-left: 15px;
-  }
-
-  @include desktop {
-  }
-
-  @include tablets {
+    text-align: left;
+    padding-left: 5px;
   }
 }
 
@@ -78,8 +61,15 @@
   color: "text-color";
 
   @include desktop {
-    padding-left: 120px;
+    padding-left: 160px;
     padding-right: 160px;
+  }
+
+  @include tablets {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 
@@ -91,12 +81,24 @@
   line-height: 30px;
   padding-top: 50px;
   max-width: 670px;
+  flex-basis: 60%;
+
+  @include desktopHd {
+    flex-basis: 75%;
+  }
 
   @include desktop {
     font-size: 14px;
     line-height: 24px;
     padding-top: 18px;
     padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include tablets {
+    padding-right: 0;
+    padding-left: 0;
+    flex-basis: 100%;
   }
 }
 
@@ -120,8 +122,30 @@
     width: 250px;
     background-size: contain;
     right: 0;
-    left: 220px;
-    top: 54%;
+    left: 33%;
+    top: 118%;
+  }
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.values__widget {
+  flex-basis: 70%;
+  padding-left: 140px;
+
+  @include desktopHd {
+    padding-left: 15px;
+  }
+
+  @include desktop {
+    flex-basis: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  @include tablets {
   }
 }
 
@@ -151,26 +175,32 @@
   }
 
   @include desktop {
+    padding-top: 15px;
+    padding-left: 55px;
+    padding-right: 40px;
   }
 
   @include tablets {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .skills-row__title {
-  padding-top: 50px;
-}
-
-.skills-row__title {
-  font-size: 1.5rem;
-  line-height: 3rem;
+  font-size: 24px;
+  line-height: 48px;
   font-weight: 700;
-  padding-top: 1.425rem;
+  padding-top: 23px;
+  flex-basis: 100%;
 
   @include desktopHd {
   }
 
   @include desktop {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    padding-top: 0;
   }
 
   @include tablets {
@@ -187,18 +217,31 @@
   }
 
   @include desktop {
+    margin: 0;
   }
 
   @include tablets {
+    margin: 0 auto;
+    max-width: 350px;
   }
+}
+
+.skills__item:nth-child(2) {
+  padding-top: 45px;
 }
 
 .skills-row {
   padding-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .slills-row__item {
   flex-basis: 25%;
+  @include tablets {
+    flex-basis: 50%;
+  }
 }
 
 .skill__circle-shape {
@@ -220,6 +263,11 @@
   position: relative;
   width: 165px;
   height: 165px;
+
+  @include desktop {
+    width: 136px;
+    height: 136px;
+  }
 }
 
 .skill__circle-text {
@@ -229,9 +277,18 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
   font-size: 18px;
+  line-height: 32px;
   font-weight: 700;
   color: #a0a5b1;
   text-align: center;
   padding-left: 42px;
   padding-right: 42px;
+
+  @include desktop {
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 39px;
+    padding-right: 39px;
+    line-height: 20px;
+  }
 }
