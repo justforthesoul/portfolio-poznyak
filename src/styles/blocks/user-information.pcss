@@ -1,40 +1,40 @@
+.user-information__wrapper {
+  margin-left: 0;
+
+  @include desktopHd {
+  margin-right: 0;
+  }
+}
+
 .user-information {
   font-size: 16px;
   line-height: 30px;
   font-weight: 600;
   padding-top: 3px;
   color: #939baa;
+  flex-basis: 60%;
+  padding-left: 90px;
+  padding-right: 250px;
+
+  @include desktopHd {
+  flex-basis: 70%;
+  padding-left: 145px;
+  padding-right: 100px;
+  max-width: 850px;
+  }
 
   @include desktop {
     font-size: 14px;
-    line-height: 20px;
-    padding-left: 75px;
+    flex-basis: 60%;
+    padding-left: 40px;
+  padding-right: 10px;
   }
   @include tablets {
-    padding-top: 41px;
+    padding-top: 35px;
     font-size: 14px;
     flex-basis: 100%;
     padding-left: 0;
-  }
-}
-
-.about-information {
-  width: 70%;
-  padding-left: 141px;
-
-  @include desktopHd {
-    padding-left: 130px;
-    padding-right: 100px;
-  }
-
-  @include desktop {
-    padding-left: 80px;
-    padding-right: 0;
-  }
-
-  @include tablets {
-    width: 100%;
-    padding-left: 0;
+    max-width: 400px;
   }
 }
 
@@ -50,13 +50,13 @@
   padding-top: 15px;
 
   @include desktop {
-    padding-top: 10px;
+    padding-top: 3px;
     font-size: 28px;
     line-height: 36px;
   }
 
   @include tablets {
-    padding-top: 11px;
+    padding-top: 5px;
     padding-right: 100px;
   }
 }

@@ -1,64 +1,63 @@
-.about__data {
-  width: 30%;
-  padding-left: 50px;
-
-  @include desktop {
-    padding-left: 0;
-  }
-
-  @include tablets {
-    width: 100%;
-   }
-}
-
-.user__data {
+.user-data {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-basis: 40%;
+  padding-right: 35px;
+  @include desktopHd {
+    flex-basis: 30%;
+    padding-right: 5px;
+  }
+  @include desktop {
+    padding-right: 0;
+  }
   @include tablets {
+    justify-content: center;
     flex-basis: 100%;
+    padding-right: 0;
   }
 }
 
 .user-data__pic {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-right: 32px;
+  margin-top: 3px;
+  flex-basis: 100%;
+
+  @include desktop {
+    margin-right: 62px;
+  }
+
+  @include tablets {
+    justify-content: center;
+    margin-right: 55px;
+  }
 }
 
 .user-data__img {
   border-radius: 50%;
-  margin-left: 77px;
-  margin-top: 5px;
-
-  @include desktopHd {
-    margin-left: 20px;
-  }
-
   @include desktop {
     margin-top: 5px;
-    margin-right: auto;
-    margin-left: 0;
     width: 170px;
     height: 170px;
-  }
-
-  @include tablets {
-    margin-left: 35px;
   }
 }
 
 .user-data__table {
-  padding-top: 58px;
-
+  padding-top: 59px;
   @include desktop {
     padding-top: 46px;
     font-size: 14px;
     line-height: 20px;
   }
 
+  @include desktop {
+    padding-top: 40px;
+  }
+
   @include tablets {
     padding-top: 18px;
-    padding-left: 2px;
   }
 }
 
@@ -74,7 +73,7 @@
 
 .user-data__table-discription {
   padding-top: 15px;
-  padding-left: 73px;
+  padding-left: 75px;
   font-weight: 600;
 
   @include desktop {
