@@ -1,20 +1,32 @@
 .about__wrapper {
-  max-width: 1080px;
-  margin: 0 auto;
-  margin-top: 163px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-top: 165px;
   
   @include desktopHd {
     margin-top: 390px;
+    min-height: 400px;
   }
 
   @include desktop {
     margin-top: 500px;
+    min-height: 330px;
   }
 
   @include tablets {
     margin-top: 270px;
+    min-height: 760px;
+  }
+}
+
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: space-between;
+  }
+
+  @include tablets {
+    justify-content: center;
   }
 }

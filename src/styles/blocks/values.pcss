@@ -1,4 +1,5 @@
 .values {
+  position: relative;
   overflow: hidden;
 
   @include desktop {
@@ -7,24 +8,33 @@
 }
 
 .values__wrapper {
-  position: relative;
   margin-top: 405px;
+
+  @include desktopHd {
+    margin-top: 370px;
+  }
+
+   @include desktop {
+    margin-top: 243px;
+  }
+
+  @include tablets {
+    margin-top: 230px;
+  }
+}
+
+.values__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   text-align: left;
   padding-left: 55px;
-  @include desktopHd {
-    margin-top: 387px;
-  }
 
   @include desktop {
-    margin-top: 258px;
     padding-left: 0;
   }
 
   @include tablets {
-    margin-top: 230px;
     justify-content: center;
   }
 }
@@ -114,7 +124,7 @@
 
   @include desktopHd {
     right: 0;
-    left: -210px;
+    left: -180px;
     top: 18%;
   }
 
@@ -127,7 +137,11 @@
   }
 
   @include tablets {
-    display: none;
+    width: 215px;
+    background-size: contain;
+    right: 0;
+    left: 25%;
+    top: 106%;
   }
 }
 
@@ -141,7 +155,7 @@
 
   @include desktop {
     flex-basis: 100%;
-    padding-left: 0;
+    padding-left: 4px;
     text-align: center;
   }
 
@@ -152,15 +166,6 @@
 .skills {
   display: flex;
   flex-wrap: wrap;
-
-  @include desktopHd {
-  }
-
-  @include desktop {
-  }
-
-  @include tablets {
-  }
 }
 
 .skills-row__list {
@@ -171,18 +176,16 @@
   flex-basis: 100%;
   max-width: 800px;
 
-  @include desktopHd {
-  }
-
   @include desktop {
-    padding-top: 15px;
-    padding-left: 55px;
-    padding-right: 40px;
+    padding-top: 23px;
+    padding-left: 52px;
+    padding-right: 35px;
   }
 
   @include tablets {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 15px;
   }
 }
 
@@ -193,17 +196,11 @@
   padding-top: 23px;
   flex-basis: 100%;
 
-  @include desktopHd {
-  }
-
   @include desktop {
     font-size: 18px;
     line-height: 20px;
     font-weight: 700;
     padding-top: 0;
-  }
-
-  @include tablets {
   }
 }
 
@@ -222,7 +219,7 @@
 
   @include tablets {
     margin: 0 auto;
-    max-width: 350px;
+    max-width: 340px;
   }
 }
 
@@ -255,18 +252,19 @@
 
 .skill-circle__above {
   stroke-width: 14px;
-  stroke-dasharray: 251;
-  stroke-dashoffset: 251;
+  stroke-dasharray: 270;
+  stroke-dashoffset: 270;
 }
 
 .skill {
   position: relative;
-  width: 165px;
-  height: 165px;
+  width: 155px;
+  height: 155px;
 
   @include desktop {
-    width: 136px;
-    height: 136px;
+    width: 130px;
+    height: 130px;
+    margin-top: 10px;
   }
 }
 

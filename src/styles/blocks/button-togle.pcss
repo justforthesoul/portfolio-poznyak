@@ -1,16 +1,22 @@
-.button-toggle {
+.button-toggle__wrapper {
   display: none;
 
   @include desktop {
     display: block;
-    border-radius: 2px;
     position: absolute;
     top: 66.5px;
-    right: 5px;
-    width: 24px;
-    height: 20px;
-    z-index: 2;
+    right: 25px;
   }
+
+  @include tablets {
+    right: 30px;
+  }
+}
+
+.button-toggle {
+  width: 24px;
+  height: 20px;
+  z-index: 2;
 }
 
 .button-toggle__btn {
