@@ -1,11 +1,13 @@
 .comments {
   position: relative;
+}
+
+.comments__wrapper {
   margin-top: 170px;
+  padding-top: 253px;
 }
 
 .comments__title {
-  padding-top: 255px;
-  padding-left: 9%;
   color: #414c63;
   font-size: 35px;
   line-height: 48px;
@@ -16,8 +18,8 @@
   position: absolute;
   width: 160px;
   height: 53px;
-  top: 254px;
-  left: 627px;
+  top: 252px;
+  left: 467px;
   display: flex;
   justify-content: space-between;
 }
@@ -66,16 +68,28 @@
 .comments__list {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 12.6%;
   padding-top: 91px;
 }
 
 .comments__item {
+  flex-basis: 34%;
+  padding-left: 125px;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 32%;
-  padding-left: 60px;
-  min-height: 220px;
+  position: relative;
+
+  &:before {
+    content: '';  
+    position: absolute;
+    left: 20px;
+    top: 3px;
+    width: 75px;
+    height: 75px;
+    background-image: svg-load('quote.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.03;
+  }
 }
 
 .comments__text {
@@ -83,22 +97,24 @@
   font-size: 16px;
   line-height: 30px;
   font-weight: 600;
-  padding-right: 20%;
 }
 
 .comments__autor {
+  padding-top: 22px;
   margin-top: auto;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
 }
 
 .comments__pic {
   border-radius: 50%;
 }
 
-.comments__wrapper {
+.comments__autor-data {
+  padding-left: 30px;
   padding-top: 5px;
-  padding-left: 29px;
 }
 
 .comments__autor-name {
@@ -109,9 +125,9 @@
 }
 
 .comments__autor-position {
-    padding-top: 7px;
   color: #b6bec8;
   font-size: 16px;
   line-height: 30px;
   font-weight: 600;
+  padding-top: 7px;
 }

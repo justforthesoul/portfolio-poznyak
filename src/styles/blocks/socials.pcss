@@ -1,101 +1,52 @@
-.social-list--header {
-  display: flex;
-  justify-content: space-around;
-  padding-right: 2.6%;
-  padding-top: 63px;
-  .social__circle-svg {
-    display: none;
-  }
-}
-
-.social-list--footer {
+.socials {
   display: flex;
   justify-content: space-between;
-  padding-right: 59%;
-  padding-left: 15px;
-  fill: #56585d;
-  transition: fill 0.5s;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
 
-  &:hover {
-    fill: #5400f3;
+.socials__link:hover,
+.socials__link:focus {
+  .socials__icon {
+    fill: #5400f2;
     transition: fill 0.5s;
   }
 }
 
-.social-list--footer .social__icon {
-  fill: #56585d;
-  transition: fill 0.5s;
-  &:hover {
-    fill: #5400f3;
-    transition: fill 0.5s;
-  }
-}
-
-.social__link {
+.socials__link {
   outline: none;
-  position: relative;
+  display: flex;
 }
 
-.social-list--header .social-item {
-  padding-left: 40px;
-}
-
-.social-list--header .social__icon {
-  fill: #414c63;
-  transition: fill 0.5s;
-}
-
-.social__link:hover,
-.social__link:focus {
-  .social__icon {
-    fill: #5400f3;
+.socials--header {
+  max-width: 165px;
+  .socials__icon {
+    fill: #414c63;
     transition: fill 0.5s;
   }
-  .social__circle {
-      stroke: #5400f3;
-      transition: stroke 0.5s;
-    }
 }
+.socials--footer {
+  max-width: 190px;
 
-.social-list--footer {
-  .social__icon {
-    width: 23px;
-    height: 23px;
-  }
-
-  .social__link--instagram .social__icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .social__link--vkontakte .social__icon {
+  .socials__icon {
+    fill: #56585d;
+    transition: fill 0.5s;
     width: 25px;
     height: 25px;
   }
-}
 
-.social__circle-svg {
-  position: absolute;
-  fill: transparent;
+  .socials__link {
+    border: 1px solid #56585d;
+    border-radius: 50%;
+    padding: 10px;
+    transition: border 0.5s;
 
-  .social__circle {
-    stroke-width: 3px;
-    stroke: #414c63;
-    transition: stroke 0.5s;
+    &:hover,
+    &:focus {
+      border: 1px solid #5400f2;
+      transition: border 0.5s;
+    }
   }
-}
-
-.social__link--instagram .social__circle-svg {
-  top: -18px;
-  left: -16px;
-}
-
-.social__link--vkontakte .social__circle-svg {
-  top: -21px;
-  left: -12px;
-}
-
-.social__link--github .social__circle-svg {
-  top: -20px;
-  left: -14px;
 }

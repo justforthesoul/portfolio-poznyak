@@ -3,7 +3,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 8.9%;
   width: 875px;
 }
 
@@ -104,17 +103,6 @@
   border-bottom-left-radius: 6px;
 }
 
-.form__send-btn {
-  box-shadow: none;
-  transition: box-shadow 0.3s;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0 0 5px 1px #5900ff;
-    transition: box-shadow 0.3s;
-  }
-}
-
 .form__input {
   border: none;
   border-bottom: 1px solid #414c63;
@@ -129,31 +117,19 @@
   }
 }
 
-.form__present-wrapper .form__input:hover + .form__icon {
-    fill: #5500f2;
-    transition: fill 0.3s;
-}
-
+.form__present-wrapper .form__input:hover + .form__icon,
 .form__present-wrapper .form__input:focus + .form__icon {
     fill: #5500f2;
     transition: fill 0.3s;
 }
 
-.form__email-wrapper .form__input:hover + .form__icon {
-    fill: #5500f2;
-    transition: fill 0.3s;
-}
-
+.form__email-wrapper .form__input:hover + .form__icon,
 .form__email-wrapper .form__input:focus + .form__icon {
     fill: #5500f2;
     transition: fill 0.3s;
 }
 
-.form__message-wrapper .form__input:hover + .form__icon {
-    fill: #5500f2;
-    transition: fill 0.3s;
-}
-
+.form__message-wrapper .form__input:hover + .form__icon,
 .form__message-wrapper .form__input:focus + .form__icon {
     fill: #5500f2;
     transition: fill 0.3s;

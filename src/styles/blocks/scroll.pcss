@@ -1,17 +1,29 @@
 .scroll {
-    display: flex;
-    margin: 0% auto;
-    width: 110px;
-    padding-top: 330px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-.scroll__title {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 600;
+.scroll--welcome {
+  margin-top: 330px;
 }
 
-.scroll__icon {
-    margin-left: 12px;
-    fill: #414c63;
+.scroll__link {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  padding-right: 50px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-image: svg-load('scroll.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.8;
+    right: 46.5%;
+    top: -2px;
+  }
 }

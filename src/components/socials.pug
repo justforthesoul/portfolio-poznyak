@@ -1,17 +1,11 @@
 mixin socials(mod)
-    ul(class="social-list social-list--" + mod)
-        li.social-item
-            a.social__link.social__link--instagram(href="#" aria-label="Инстаграм")
-                svg.social__circle-svg(viewbox='0 0 100 100' preserveaspectratio='none' width='52' height='52')
-                    circle.social__circle(cx='50' cy='50' r='46')
-                +icon("insta", "social__icon", width="25", height="25")
-        li.social-item
-            a.social__link.social__link--vkontakte(href='#' aria-label="В контакте")
-                svg.social__circle-svg(viewbox='0 0 100 100' preserveaspectratio='none' width='52' height='52')
-                    circle.social__circle(cx='50' cy='50' r='46')
-                +icon("vk", "social__icon", width="30", height="30")
-        li.social-item
-            a.social__link.social__link--github(href="#" aria-label="Гитхаб")
-                svg.social__circle-svg(viewbox='0 0 100 100' preserveaspectratio='none' width='52' height='52')
-                    circle.social__circle(cx='50' cy='50' r='46')
-                +icon("github", "social__icon", width="27", height="27")
+    ul(class="socials socials--" + mod)
+        li.socials__item
+            a.socials__link.socials__link--instagram(href="#" aria-label="Инстаграм")
+                +icon("insta", "socials__icon socials__icon--instagram", width="26", height="26")
+        li.socials__item
+            a.socials__link.socials__link--vkontakte(href='#' aria-label="В контакте")
+                +icon("vk", "socials__icon socials__icon--vkontakte", width="30", height="30")
+        li.socials__item
+            a.socials__link.socials__link--github(href="#" aria-label="Гитхаб")
+                +icon("github", "socials__icon socials__icon--github", width="27", height="27")
