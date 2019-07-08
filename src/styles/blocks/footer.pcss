@@ -2,11 +2,11 @@
   background-color: #1f232d;
 }
 
-.footer__section {
-  margin-top: 135px;
+.footer__wrapper {
+  margin-top: 140px;
 }
 
-.footer__wrapper {
+.footer__content {
   display: flex;
   justify-content: space-between;
   padding-top: 96px;
@@ -17,55 +17,57 @@
   }
 
   @include desktop {
-    padding-top: 50px;
+    padding-top: 46px;
+  }
+
+  @include tablets {
+    flex-wrap: wrap;
   }
 }
 
 .footer__author {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   flex-basis: 25%;
   @include desktopHd {
     padding-left: 27px;
+    display: block;
+    max-width: 200px;
   }
   @include desktop {
-    align-self: flex-start;
     padding-left: 0;
+    padding-top: 10px;
+  }
+
+  @include tablets {
+    flex-basis: 100%;
+    max-width: 300px;
   }
 }
 
 .footer__year {
-  align-self: flex-start;
   flex-basis: 50%;
-  padding-top: 10px;
   color: #363942;
+  line-height: 52px;
   font-size: 48px;
-  line-height: 30px;
   font-weight: 700;
   flex-basis: 50%;
-  @include desktopHd {
-    flex-basis: 100%;
-  }
-  @include desktop {
-    padding-top: 15px;
+  @include tablets {
+    padding-left: 3px;
   }
 }
 
 .footer__autor-information {
-  align-self: flex-start;
   padding-left: 33px;
   flex-basis: 50%;
   @include desktopHd {
     padding-left: 3px;
-    padding-top: 15px;
   }
-  @include desktop {
-    padding-top: 27px;
-    padding-left: 0;
+
+  @include tablets {
+    padding-left: 5px;
   }
 }
-
 
 .footer__name {
   padding-right: 10px;
@@ -74,6 +76,17 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  @include desktopHd {
+    padding-top: 15px;
+    padding-right: 130px;
+  }
+  @include desktop {
+    padding-top: 12px;
+  }
+
+  @include tablets {
+    padding-right: 0;
+  }
 }
 
 .footer__description {
@@ -82,13 +95,18 @@
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
+
   @include desktop {
     font-size: 14px;
     line-height: 24px;
   }
+
+  @include tablets {
+    padding-top: 10px;
+  }
 }
 
-.footer__content {
+.footer__information {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 75%;
@@ -98,8 +116,14 @@
     padding-left: 20px;
   }
 
-   @include desktop {
-    padding-left: 60px;
+  @include desktop {
+    padding-left: 36px;
+  }
+
+  @include tablets {
+    flex-basis: 100%;
+    padding-left: 6px;
+    padding-top: 28px;
   }
 }
 
@@ -113,39 +137,65 @@
   line-height: 30px;
   font-weight: 400;
   @include desktopHd {
-    flex-basis: 40%;
+    padding-top: 60px;
   }
 
   @include desktop {
     flex-basis: 100%;
     font-size: 14px;
-  line-height: 26px;
-  font-weight: 400;
-  padding-top: 40px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-top: 45px;
+  }
+
+  @include tablets {
+    padding-top: 28px;
   }
 }
 
-.footer__block--blockquote {
-  padding-left: 15px;
- 
+.footer__block:nth-child(2) {
+  padding-right: 150px;
   @include desktopHd {
-  padding-left: 0;
+    flex-basis: 40%;
+    padding-right: 20px;
+  }
+  @include desktop {
+    flex-basis: 100%;
+  }
+}
+
+.footer__block:nth-child(3) {
+  padding-left: 35px;
+
+  @include desktopHd {
+    flex-basis: 60%;
+    max-width: 500px;
   }
 
   @include desktop {
-  padding-top: 55px;
+    flex-basis: 100%;
+    padding-left: 0;
+    padding-top: 53px;
+  }
+
+  @include tablets {
+    padding-top: 42px;
   }
 }
 
 .footer__socials {
   flex-basis: 100%;
   padding-top: 15px;
+
+  @include desktop {
+    padding-top: 10px;
+  }
 }
 
 .footer__blockquote-author {
   padding-top: 18px;
   color: #fff;
   @include desktop {
-  padding-top: 5px;
+    padding-top: 5px;
   }
 }
