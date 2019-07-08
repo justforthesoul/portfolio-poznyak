@@ -1,18 +1,12 @@
-.welcome__section {
-  margin-top: 310px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+.welcome__wrapper {
+  margin-top: 312px;
 
   @include desktopHd {
-    align-items: flex-start;
-    margin-top: 260px;
+    margin-top: 265px;
   }
 
   @include desktop {
     margin-top: 175px;
-    align-items: center;
   }
 
   @include tablets {
@@ -20,8 +14,25 @@
   }
 }
 
-.welcome {
+.welcome__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
+  padding-left: 500px;
+  padding-right: 500px;
+
+  @include desktopHd {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include desktop {
+    text-align: center;
+    padding-left: 27%;
+  padding-right: 27%;
+  }
 }
 
 .welcome__title {
@@ -30,24 +41,29 @@
   font-weight: 600;
   color: "text-color";
   opacity: 0.5;
+  padding-left: 100px;
+  padding-right: 100px;
   flex-basis: 100%;
 
   @include desktopHd {
-    flex-basis: 36%;
     text-align: right;
+    padding-left: 23%;
+    padding-right: 25px;
+    flex-basis: 40%;
   }
 
   @include desktop {
-    text-align: center;
     font-size: 16px;
     line-height: 28px;
     flex-basis: 100%;
+    padding-left: 25%;
+  padding-right: 25%;
+    text-align: center;
   }
 
   @include tablets {
     font-size: 14px;
     line-height: 24px;
-    flex-basis: 100%;
   }
 }
 
@@ -59,25 +75,26 @@
   flex-basis: 100%;
 
   @include desktopHd {
-    flex-basis: 63%;
+    flex-basis: 60%;
     text-align: left;
     padding-top: 0;
-    padding-left: 55px;
+    padding-left: 29px;
+    padding-right: 350px;
   }
 
   @include desktop {
-    text-align: center;
     padding-top: 19px;
     font-size: 48px;
     line-height: 48px;
     flex-basis: 100%;
     padding-left: 0;
+    padding-right: 0;
+    text-align: center;
   }
 
   @include tablets {
     padding-top: 2px;
     font-size: 36px;
     line-height: 49px;
-    flex-basis: 100%;
   }
 }
