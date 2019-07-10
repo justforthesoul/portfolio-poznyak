@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   const parallaxMountain = document.querySelector(".parallax-mountain");
-  const mountainLayers = parallaxMountain.querySelectorAll(".parallax-mountain__layer");
-  
+  const mountainLayers = parallaxMountain.querySelectorAll(
+    ".parallax-mountain__layer"
+  );
+
   function moveMoutainsLayerOnScroll(wScroll) {
     mountainLayers.forEach(layer => {
       if (wScroll <= 1700) {

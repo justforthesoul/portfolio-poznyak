@@ -6,12 +6,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       togglBtn.classList.remove("button-toggle__btn--calm");
       togglBtn.classList.add("button-toggle__btn--active");
       popapMenu.classList.remove("js-hidden");
-      //document.body.style.overflow = "hidden";
     } else {
       togglBtn.classList.add("button-toggle__btn--calm");
       togglBtn.classList.remove("button-toggle__btn--active");
       popapMenu.classList.add("js-hidden");
-      // document.body.style.overflow = "auto";
     }
   });
 });
