@@ -1,8 +1,8 @@
 script(type="text/x-template")#reviews-slider-template
     .reviews-slider
         .reviews-slider__buttons
-                button(type="button" ref="btn_prev" @click="previous()").reviews-slider__btn.reviews-slider__btn_prev
-                button(type="button" ref="btn_next" @click="next()").reviews-slider__btn.reviews-slider__btn_next
+                button(type="button" aria-label="Предидущий слайд" ref="btn_prev" @click="previous()").reviews-slider__btn.reviews-slider__btn_prev
+                button(type="button" aria-label="Следующий слайд" ref="btn_next" @click="next()").reviews-slider__btn.reviews-slider__btn_next
         .reviews-slider__list
             flickity(ref="flickity" :options="flickityOptions")
                 .reviews-slider__item(v-for="review in reviews" :key="review.id")

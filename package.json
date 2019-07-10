@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --mode=development --hot",
     "build": "rm -rf dist && webpack --mode=production --progress",
-    "reg": "node reg-util.js"
+    "reg": "node reg-util.js",
+    "stylelint": "stylelint src/styles/**/*.pcss"
   },
   "keywords": [],
   "author": "",
@@ -56,6 +57,7 @@
     "pug": "^2.0.3",
     "request": "^2.88.0",
     "signale": "^1.4.0",
+    "stylelint": "^10.1.0",
     "vue": "^2.6.7",
     "vue-flickity": "^1.1.2",
     "vue-router": "^3.0.2"

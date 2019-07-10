@@ -9,13 +9,28 @@
 }
 
 .main-menu__link {
+  position: relative;
   text-decoration: none;
+  outline: none;
   padding-bottom: 20px;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #5400f3;
+    bottom: 0;
+    right: 0;
+    left: -10%;
+    transition: all 0.5s;
+  }
 
   &:focus {
-    outline: none;
     color: #5400f3;
-    border-bottom: 1px solid #5400f3;
+    transition: color 0.5s;
+    &:after {
+      width: 120%;
+    }
   }
 }
 
