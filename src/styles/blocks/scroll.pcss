@@ -14,7 +14,7 @@
 
   @include desktop {
     display: none;
-  } 
+  }
 }
 
 .scroll__link {
@@ -23,17 +23,49 @@
   font-weight: 600;
   padding-right: 55px;
   position: relative;
+  text-decoration: none;
+  outline: none;
 
   &:after {
     content: "";
     position: absolute;
     width: 30px;
     height: 40px;
-    background-image: svg-load('scroll.svg');
+    background-image: svg-load("scroll.svg");
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.8;
     right: 10px;
     top: -2px;
+    animation-name: shaking;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  &:focus {
+    color: #5400f2;
+    transition: color 0.5s;
+    &:after {
+      background-image: svg-load("scroll.svg", fill=#5400f2);
+      transition: all 0.5s;
+    }
+  }
+}
+
+@keyframes shaking {
+  0%,
+  15%,
+  100% {
+    transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  3%,
+  9% {
+    transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  6%,
+  12% {
+    transform: translateY(5px);
+    transform: translateY(5px);
   }
 }
