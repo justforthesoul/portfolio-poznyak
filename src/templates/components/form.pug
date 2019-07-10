@@ -1,4 +1,5 @@
-form.form(method="post")
+script(type="text/x-template")#form-template
+    form.form(method="post")
         .form__present-wrapper
             label.form__input-title(for="form-name") Введите ваше имя
             input#form-name.form__input(type="text" name="name" placeholder="Ковальчук Дмитрий" required="")
@@ -12,4 +13,4 @@ form.form(method="post")
             textarea#form-message.form__input(name="message" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" required="")
             +icon("message", "form__icon form__icon--message", width="30", height="30")
         .form__send-wrapper
-            button.form__send-btn(type="submit") Отправить
+            button.form__send-btn(type="submit" @click.prevent) Отправить
