@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 875px;
+
   @include desktopHd {
     padding-left: 32px;
   }
@@ -125,8 +126,8 @@
   background-color: transparent;
   outline: none;
 
-  &:hover,
-  &:focus {
+  &::hover,
+  &::focus {
     border-bottom: 1px solid #5500f2;
     transition: border-bottom 0.3s;
   }
@@ -173,20 +174,6 @@
     border-bottom-right-radius: 27px;
     border-bottom-left-radius: 0;
     padding: 21px 80px;
-  }
-}
-
-.form__input {
-  border: none;
-  border-bottom: 1px solid #414c63;
-  flex-basis: 100%;
-  background-color: transparent;
-  outline: none;
-
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid #5500f2;
-    transition: border-bottom 0.3s;
   }
 }
 

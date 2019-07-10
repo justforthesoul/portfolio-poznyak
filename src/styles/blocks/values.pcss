@@ -112,7 +112,7 @@
   }
 }
 
-.values__wrapper:before {
+.values__wrapper::before {
   content: "";
   position: absolute;
   width: 600px;
@@ -157,9 +157,6 @@
     flex-basis: 100%;
     padding-left: 4px;
     text-align: center;
-  }
-
-  @include tablets {
   }
 }
 
@@ -238,6 +235,7 @@
 
 .slills-row__item {
   flex-basis: 25%;
+  
   @include tablets {
     flex-basis: 50%;
   }

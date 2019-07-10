@@ -13,7 +13,7 @@
   text-decoration: none;
   outline: none;
   padding-bottom: 20px;
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     width: 0;
@@ -28,7 +28,7 @@
   &:focus {
     color: #5400f3;
     transition: color 0.5s;
-    &:after {
+    &::after {
       width: 120%;
     }
   }
