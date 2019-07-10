@@ -17,7 +17,7 @@
   position: relative;
   height: 550px;
 
-  &:before {
+  &::before {
     content: "4";
     position: absolute;
     top: 53%;
@@ -58,7 +58,7 @@
   position: relative;
 }
 
-.works-slider__link:hover:before {
+.works-slider__link:hover::before {
   content: "";
   margin: 0;
   padding: 0;
@@ -71,7 +71,7 @@
   z-index: 1;
 }
 
-.works-slider__link:focus:before {
+.works-slider__link:focus::before {
   content: "";
   margin: 0;
   padding: 0;

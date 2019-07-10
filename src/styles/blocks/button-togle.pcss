@@ -35,8 +35,8 @@
 
   transition: all 0.25s ease-in-out;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: "";
     display: block;
     width: 100%;
@@ -61,11 +61,11 @@
 .button-toggle__btn--active {
   border-color: transparent;
 
-  &:before {
+  &::before {
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
-  &:after {
+  &::after {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
