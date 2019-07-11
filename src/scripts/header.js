@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  let headerFix = document.querySelector(".header");
+  const headerFix = document.querySelector(".header");
+
   window.addEventListener("scroll", function() {
     if (pageYOffset >= 50) {
       headerFix.classList.add("js-fixed");
@@ -8,4 +9,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
       headerFix.classList.remove("js-fixed");
     }
   });
+  
 });
