@@ -23,6 +23,28 @@
   flex-wrap: wrap;
   padding-right: 10px;
 
+  .form__input {
+    background-image: svg-load("user.svg", fill=rgba(#000, 0.2));
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 3px 18px;
+    transition: all 0.5s;
+
+    &:hover,
+    &:focus {
+      background-image: svg-load("user.svg", fill=rgba(#5500f2, 1));
+      transition: all 0.5s;
+
+      @include desktop {
+        background: none;
+      }
+    }
+
+    @include desktop {
+      background: none;
+    }
+  }
+
   @include desktop {
     padding-right: 10px;
     padding-left: 4px;
@@ -42,6 +64,28 @@
   display: flex;
   flex-wrap: wrap;
   padding-right: 10px;
+
+  .form__input {
+    background-image: svg-load("envelope.svg", fill=rgba(#000, 0.2));
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 3px 18px;
+    transition: all 0.5s;
+
+    &:hover,
+    &:focus {
+      background-image: svg-load("envelope.svg", fill=rgba(#5500f2, 1));
+      transition: all 0.5s;
+
+      @include desktop {
+        background: none;
+      }
+    }
+
+    @include desktop {
+      background: none;
+    }
+  }
 
   @include desktop {
     padding-right: 4px;
@@ -64,6 +108,28 @@
   flex-wrap: wrap;
   padding-right: 9px;
   padding-top: 32px;
+
+  .form__input {
+    background-image: svg-load("message.svg", fill=rgba(#000, 0.2));
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 3px 20px;
+    transition: all 0.5s;
+
+    &:hover,
+    &:focus {
+      background-image: svg-load("message.svg", fill=rgba(#5500f2, 1));
+      transition: all 0.5s;
+
+      @include desktop {
+        background: none;
+      }
+    }
+
+    @include desktop {
+      background: none;
+    }
+  }
 
   @include desktop {
     padding-right: 3px;
@@ -97,6 +163,7 @@
   font-size: 16px;
   line-height: 30px;
   font-weight: 600;
+  cursor: pointer;
 
   @include desktop {
     font-size: 14px;
@@ -104,32 +171,19 @@
   }
 }
 
-.form__icon {
-  position: absolute;
-  fill: #c4c8d0;
-  top: 45px;
-  transition: fill 0.3s;
-
-  @include desktop {
-    fill: transparent;
-  }
-}
-
-.form__icon--message {
-  top: 83px;
-}
-
 .form__input {
   border: none;
-  border-bottom: 1px solid #414c63;
+  border-bottom: 2px solid #414c63;
   flex-basis: 100%;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
 
-  &::hover,
-  &::focus {
-    border-bottom: 1px solid #5500f2;
-    transition: border-bottom 0.3s;
+  &:focus,
+  &:hover {
+    border-bottom: 2px solid #5500f2;
+    transition: all 0.5s;
   }
 }
 
@@ -175,22 +229,4 @@
     border-bottom-left-radius: 0;
     padding: 21px 80px;
   }
-}
-
-.form__present-wrapper .form__input:hover + .form__icon,
-.form__present-wrapper .form__input:focus + .form__icon {
-  fill: #5500f2;
-  transition: fill 0.3s;
-}
-
-.form__email-wrapper .form__input:hover + .form__icon,
-.form__email-wrapper .form__input:focus + .form__icon {
-  fill: #5500f2;
-  transition: fill 0.3s;
-}
-
-.form__message-wrapper .form__input:hover + .form__icon,
-.form__message-wrapper .form__input:focus + .form__icon {
-  fill: #5500f2;
-  transition: fill 0.3s;
 }

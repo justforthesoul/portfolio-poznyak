@@ -10,3 +10,5 @@ import "./scripts/parallax-mountain";
 import "./scripts/parallax-budda";
 import "./scripts/button-toggle";
 import "./scripts/form";
+import "./scripts/works";
+import "./scripts/scroll";

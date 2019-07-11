@@ -26,108 +26,76 @@
   }
 }
 
+.parallax-mountain__static {
+  display: none;
+
+  @include parallax-block {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("~images/parallax-mountain/mountain1200.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include tablets {
+    background-image: url("~images/parallax-mountain/mountain768.jpg");
+  }
+}
+
+.parallax-mountain__moving {
+  @include parallax-block {
+    display: none;
+  }
+}
+
 .parallax-mountain__layer {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   will-change: transform;
-}
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.parallax-mountain__img {
-  position: absolute;
-}
-
-.parallax-mountain__img--sky {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.parallax-mountain__img--mountain {
-  right: 0;
-  top: 310px;
-
-  @include desktop {
-    top: 610px;
+  &:nth-child(1) {
+    background-image: url("~images/parallax-mountain/Sky.png");
   }
-}
 
-.parallax-mountain__img--baloon {
-  top: 480px;
-  left: 50%;
-  margin-left: 16%;
+  &:nth-child(2) {
+    background-image: url("~images/parallax-mountain/Mountain.png");
+    bottom: -10%;
+  }
 
-  @include desktop {
-    top: 430px;
+  &:nth-child(3) {
+    background-image: url("~images/parallax-mountain/Baloon.png");
+    top: 480px;
     left: 50%;
-    margin-left: 30%;
-    width: 20%;
-    height: auto;
-  }
-}
-
-.parallax-mountain__img--cloud {
-  left: 0;
-  top: 520px;
-  
-  @include desktop {
-    top: 450px;
+    margin-left: 10%;
+    background-size: auto;
+ 
+    @include desktopHd {
+      margin-left: 17.5%;
+    }
   }
 
-  @include tablets {
-    top: 800px;
-    width: 200%;
-    height: auto;
-  }
-}
-
-.parallax-mountain__img--man {
-  left: 0;
-  top: 665px;
-
-  @include desktop {
-    left: -35%;
-    top: 800px;
+  &:nth-child(4) {
+    background-image: url("~images/parallax-mountain/Cloud.png");
+    bottom: -40%;
   }
 
-  @include tablets {
-    left: 0;
-    top: 750px;
-    width: 120%;
-    height: auto;
-  }
-}
-
-.parallax-mountain__img--mountain1 {
-  right: -50px;
-  bottom: 190px;
-
-  @include desktop {
-    right: -50px;
-    bottom: 250px;
+  &:nth-child(5) {
+    background-image: url("~images/parallax-mountain/Man.png");
+    width: 47%;
+    height: 47%;
+    top: 670px;
   }
 
-  @include tablets {
-    bottom: 150px;
-    height: 60%;
-    width: 100%;
-    right: 0;
+  &:nth-child(6) {
+    background-image: url("~images/parallax-mountain/Mountain1.png");
   }
-}
 
-.parallax-mountain__img--white {
-  left: 0;
-  bottom: -200px;
-  height: 60%;
-  width: 100%;
-
-  @include tablets {
-    bottom: -100px;
-    height: 40%;
-    width: 100%;
+  &:nth-child(7) {
+    background-image: url("~images/parallax-mountain/White.png");
+    bottom: -50%;
   }
 }
