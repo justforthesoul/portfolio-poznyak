@@ -100,7 +100,7 @@ new Vue({
           break;
       }
     }
-  },
+  }, 
   created() {
     const data = require("../data/works.json");
     this.works = this.makeArrWithRequiredImages(data);
