@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "1 Сайт школы онлайн образования",
+        "title": "1 Сайт школы образования",
         "skills": "1 Html, Css, JavaScript",
         "photo": "slider-1.jpg",
         "link": "//google.com",
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "title": "2 Сайт школы онлайн образования",
+        "title": "2 Сайт школы образования",
         "skills": "2 Html, Css, JavaScript",
         "photo": "slider-2.jpg",
         "link": "//yandex.ru",
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "title": "3 Сайт школы онлайн образования",
+        "title": "3 Сайт школы образования",
         "skills": "3 Html, Css, JavaScript",
         "photo": "slider-3.jpg",
         "link": "//rambler.ru",
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "title": "4 Сайт школы онлайн образования",
+        "title": "4 Сайт школы образования",
         "skills": "2 Html, Css, JavaScript",
         "photo": "slider-4.jpg",
         "link": "//yandex.ru",
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "title": "5 Сайт школы онлайн образования",
+        "title": "5 Сайт школы образования",
         "skills": "5 Html, Css, JavaScript",
         "photo": "slider-5.jpg",
         "link": "//rambler.ru",

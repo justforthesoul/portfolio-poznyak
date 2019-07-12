@@ -23,34 +23,74 @@
     font-size: 400px;
     font-weight: 800;
     margin-left: -18.5%;
-    color: rgba($text-color, 0.05);
+    color: rgba($text-color, 0.1);
 
-    @include desktop {
+    @include desktopHd {
       top: 0;
       transform: translateY(-15%);
-      margin-left: -11%;
+      margin-left: -17.8%;
+      font-size: 305px;
+    }
+
+    @include desktop {
+      transform: translateY(-15%);
+      margin-left: -15.5%;
     }
 
     @include tablets {
       display: none;
     }
   }
+
+  @include desktopHd {
+    width: 65%;
+    max-width: 900px;
+  }
+
+  @include desktop {
+    width: 100%;
+    max-width: 900px;
+  }
 }
 
 .works-slider__container {
   width: 87.8%;
+
+  @include desktopHd {
+    width: 90.5%;
+  }
+
+  @include desktop {
+    width: 92.7%;
+    max-width: 808px;
+  }
+
+  @include tablets {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
 }
 
 .works-slider__fullpic-container {
   position: relative;
-  max-height: 550px;
   overflow: hidden;
+  padding-top: 56.3%;
+
+  @include tablets {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-top: 58%;
+  }
 }
 
 .works-slider__fullpic-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .works-slider__thumbs-wrapper {
@@ -59,8 +99,17 @@
   right: 0;
   bottom: 0;
   width: 18.2%;
-  height: 73%;
+  height: 72.8%;
   box-shadow: -30px 30px 60px 30px rgba(#000, 0.5);
+
+  @include desktopHd {
+    width: 25.6%;
+    height: 85%;
+  }
+
+  @include tablets {
+    box-shadow: none;
+  }
 }
 
 .works-slider__thumbs {
@@ -76,6 +125,11 @@
   overflow: hidden;
   transform: translateY(-100%);
 
+  @include desktopHd {
+    transform: translateY(-200%);
+    max-height: 130px;
+  }
+
   &.active {
     outline: 3px solid #5500f2;
     outline-offset: -3px;
@@ -83,20 +137,26 @@
 }
 
 .works-slider__thumb {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .works-slider__buttons {
   display: flex;
   justify-content: flex-end;
 
-  @include phones {
-    top: initial;
-    bottom: 0;
+  @include tablets {
+    margin-top: -50px;
+    color: #000;
+    z-index: 10;
   }
 }
 
 .works-slider__btn-wrapper {
+  background-color: #2d3c4e;
+}
+
+
+.works-slider__btn[type="button"] {
   background-color: #2d3c4e;
 }
 
@@ -105,7 +165,6 @@
   height: 50px;
   display: block;
   position: relative;
-  z-index: 1;
 
   &::before {
     content: "";
@@ -154,7 +213,13 @@
   width: 25%;
   padding-left: 23px;
 
-  @include tablets {
+  @include desktopHd {
+    width: 35%;
+    padding-left: 42px;
+    padding-top: 5px;
+  }
+
+  @include desktop {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -163,8 +228,8 @@
     text-align: center;
   }
 
-  @include phones {
-    padding: 0 5%;
+  @include tablets {
+    padding: 0 2%;
     text-align: left;
     align-items: flex-start;
   }
@@ -173,7 +238,18 @@
 .works-slider__tags {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 26px;
+
+  @include desktop {
+    padding-top: 50px;
+    padding-left: 10px;
+  }
+
+  @include tablets {
+    padding-top: 55px;
+    padding-left: 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 
 .works-slider__tag-item {
@@ -182,12 +258,31 @@
   padding: 12px 20px;
   background-color: rgba(#2d3c4e, 0.05);
   border-radius: 25px;
+
+  @include tablets {
+    padding: 10px 15px;
+  }
 }
 
 .works-slider__title {
   font-size: 30px;
   line-height: 44px;
   font-weight: 700;
+  padding-top: 26px;
+
+  @include desktopHd {
+    padding-top: 24px;
+  }
+
+  @include desktop {
+    padding-top: 5px;
+  }
+
+  @include tablets {
+    padding-top: 12px;
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .works-slider__desc {
@@ -195,11 +290,29 @@
   font-weight: 600;
   color: rgba($text-color, 0.7);
   line-height: 30px;
+
+  @include desktop {
+    padding-top: 19px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @include tablets {
+    padding-top: 15px;
+  }
 }
 
 .works-slider__link {
   padding-top: 35px;
   padding-left: 35px;
+
+  @include desktop {
+    padding-top: 20px;
+  }
+
+  @include tablets {
+    padding-top: 25px;
+  }
 }
 
 .iconed-link {
@@ -209,6 +322,10 @@
   color: #4b6fd7;
   position: relative;
   outline: none;
+
+  @include desktop {
+    font-size: 14px;
+  }
 
   &:hover,
   &:focus {
@@ -225,5 +342,10 @@
     position: absolute;
     top: 25%;
     left: -20%;
+
+    @include desktop {
+      top: 10%;
+      left: -25%;
+    }
   }
 }
