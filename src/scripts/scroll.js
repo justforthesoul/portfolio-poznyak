@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   const headerFix = document.querySelector(".header");
   const anchors = document.querySelectorAll(".main-menu__link, .scroll__link");
+  const mainMenu = document.querySelector(".main-menu");
+  const navLinks = mainMenu.querySelectorAll(".main-menu__link");
+  let curentSectionId = null;
 
   for (let anchor of anchors) {
     anchor.addEventListener("click", function(e) {
@@ -14,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   }
 
-  window.addEventListener("scroll", function() {
+  document.addEventListener("scroll", function() {
     if (pageYOffset >= 50) {
       headerFix.classList.add("js-fixed");
     } else {
@@ -22,20 +25,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   });
 
-
-  /*const mainMenu = document.querySelector(".main-menu");
-
-  let curentSectionId = null;
-  const navLinks = mainMenu.querySelectorAll(".main-menu__link");
-
-
   document.addEventListener("scroll", function() {
     const section = document.querySelectorAll("section");
-    
+
     section.forEach(item => {
       const topPos = item.getBoundingClientRect().top;
-      
-      if (topPos >= -25 && topPos <= 25) {
+
+      if (topPos >= -50 && topPos <= 50) {
         curentSectionId = item.id;
       }
     });
@@ -43,14 +39,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     getActive(curentSectionId);
   });
 
-  function getActive(curentSectionId) {
+  function getActive(Id) {
     navLinks.forEach(link => {
       const href = link.getAttribute("href");
       link.classList.remove("main-menu__link--active");
 
-      if (href === `#${curentSectionId}`) {
+      if (href === `#${Id}`) {
         link.classList.add("main-menu__link--active");
       }
     });
-  }*/
+  }
 });
