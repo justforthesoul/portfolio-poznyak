@@ -18,9 +18,9 @@ for (let anchor of anchors) {
   window.addEventListener("scroll", function() {
     if (pageYOffset >= 50) {
       headerFix.classList.add("js-fixed");
-      return false;
     } else {
       headerFix.classList.remove("js-fixed");
     }
+    
   });
 });
