@@ -78,3 +78,18 @@
     }
   }
 }
+
+.main-menu__link--active {
+  color: #5400f3;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 120%;
+    height: 2px;
+    background: #5400f3;
+    bottom: 0;
+    right: 0;
+    left: -10%;
+    transition: all 0.3s;
+  }
+}
