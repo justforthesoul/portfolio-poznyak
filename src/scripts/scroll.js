@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    const menuList = document.querySelector(".main-menu__list");
-    const menuLink = menuList.querySelectorAll(".main-menu__link");
+  const headerFix = document.querySelector(".header");
+  const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    
+    const blockID = anchor.getAttribute("href");
+    
+    document.querySelector("" + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+}
+
+  window.addEventListener("scroll", function() {
+    if (pageYOffset >= 50) {
+      headerFix.classList.add("js-fixed");
+      return false;
+    } else {
+      headerFix.classList.remove("js-fixed");
+    }
+  });
 });
