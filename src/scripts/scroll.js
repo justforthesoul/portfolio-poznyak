@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     section.forEach(item => {
       const topPos = item.getBoundingClientRect().top;
 
-      if (topPos >= -50 && topPos <= 50) {
+      if (topPos >= -500 && topPos <= 300) {
         curentSectionId = item.id;
       }
     });

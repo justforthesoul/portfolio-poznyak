@@ -2,6 +2,9 @@ import Vue from "vue";
 
 const skill = {
   template: "#skill",
+  data() {
+    return {};
+  },
   props: {
     skillName: String,
     skillPercent: Number
@@ -9,11 +12,23 @@ const skill = {
   methods: {
     drowColoredCircle() {
       const circle = this.$refs["circle"];
+
       const dashArray = parseInt(
         getComputedStyle(circle).getPropertyValue("stroke-dasharray")
       );
+
       const percent = (dashArray / 100) * (100 - this.skillPercent);
-      circle.style.strokeDashoffset = percent;
+
+      let startPersent = 270;
+
+      let time = (dashArray * 2) / this.skillPercent;
+
+      setInterval(function() {
+        if (startPersent >= percent) {
+          circle.style.strokeDashoffset = startPersent;
+          startPersent--;
+        }
+      }, time);
     }
   },
   mounted() {
