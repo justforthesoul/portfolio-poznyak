@@ -1,4 +1,4 @@
-.form {
+.form__wrapper {
   padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +203,6 @@
 }
 
 .form__send-btn {
-  outline: none;
   margin-top: 60px;
   text-transform: uppercase;
   color: #fff;
@@ -229,4 +228,23 @@
     border-bottom-left-radius: 0;
     padding: 21px 80px;
   }
+}
+
+.js-error-block {
+  display: none;
+}
+
+.js-has-error {
+  display: block;
+}
+
+.form__error {
+  position: absolute;
+  bottom: -31px;
+  left: 35px;
+  padding: 11px 5px 5px 5px;
+  color: #fff;
+  font-weight: 600;
+  background-color: rgba(#cd1515, 0.9);
+  clip-path: polygon(50% 0, 55% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%, 45% 20%);;
 }
