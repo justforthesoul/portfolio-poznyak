@@ -9,54 +9,90 @@
   width: 100%;
   height: 1460px;
   clip-path: polygon(50% 6.2%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+
+  @include desktopHd {
+    clip-path: polygon(50% 6.2%, 100% 2.2%, 100% 100%, 0% 100%, 0% 2.2%);
+  }
+
+  @include desktop {
+    clip-path: polygon(50% 6.2%, 100% 3.8%, 100% 100%, 0% 100%, 0% 3.8%);
+  }
+
+  @include tablets {
+    clip-path: polygon(50% 6.2%, 100% 5%, 100% 100%, 0% 100%, 0% 5%);
+  }
+}
+
+.parallax-budda__static {
+  display: none;
+
+  @include parallax-block {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("~images/parallax-budda/budda1200.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.parallax-budda__moving {
+  @include parallax-block {
+    display: none;
+  }
 }
 
 .parallax-budda__layer {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   will-change: transform;
-}
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.parallax-budda__img {
-  position: absolute;
-}
+  &:nth-child(1) {
+    background-image: url("~images/parallax-budda/background.png");
+    width: 110%;
+    height: 110%;
+  }
 
-.parallax-budda__img--background {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
+  &:nth-child(2) {
+    background-image: url("~images/parallax-budda/mountain-budda.png");
+    width: 115%;
+    bottom: -10%;
+    right: -15%;
+  }
 
-.parallax-budda__img--mountain-budda {
-  right: 0;
-  top: 410px; 
-  height: 40%; 
-}
+  &:nth-child(3) {
+    background-image: url("~images/parallax-budda/buddha.png");
+    top: 385px;
+    left: 50%;
+    margin-left: 12.5%;
+    background-size: auto;
 
-.parallax-budda__img--buddha {
-  top: 385px;
-  left: 50%;
-  margin-left: 12.5%;
-}
+    @include desktopHd {
+      margin-left: 17.5%;
+    }
+  }
 
-.parallax-budda__img--cloud-3 {
-  left: 0;
-  bottom: 0;
-}
+  &:nth-child(4) {
+    background-image: url("~images/parallax-budda/cloud-1.png");
+    width: 110%;
+    bottom: -50%;
+  }
 
-.parallax-budda__img--cloud-2 {
-  left: 0;
-  bottom: 0;
-  height: 50%;
-}
+  &:nth-child(5) {
+    background-image: url("~images/parallax-budda/cloud-2.png");
+    width: 110%;
+    bottom: -10%;
+    right: -20%;
+  }
 
-.parallax-budda__img--cloud-1 {
-  left: 0;
-  bottom: 0;
-  height: 65%;
+  &:nth-child(6) {
+    background-image: url("~images/parallax-budda/cloud-3.png");
+    width: 120%;
+    height: 100%;
+    right: -20%;
+    bottom: -10%;
+  }
 }

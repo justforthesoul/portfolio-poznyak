@@ -1,11 +1,42 @@
+.user-information__wrapper {
+  margin-left: 0;
+
+  @include desktopHd {
+    margin-right: 0;
+  }
+}
+
 .user-information {
   font-size: 16px;
   line-height: 30px;
   font-weight: 600;
   padding-top: 3px;
   color: #939baa;
-  width: 550px;
-  margin-left: 141px;
+  flex-basis: 60%;
+  padding-left: 90px;
+  padding-right: 250px;
+
+  @include desktopHd {
+    flex-basis: 70%;
+    padding-left: 145px;
+    padding-right: 100px;
+    max-width: 850px;
+  }
+
+  @include desktop {
+    font-size: 14px;
+    flex-basis: 60%;
+    padding-left: 40px;
+    padding-right: 10px;
+  }
+
+  @include tablets {
+    padding-top: 35px;
+    font-size: 14px;
+    flex-basis: 100%;
+    padding-left: 0;
+    max-width: 400px;
+  }
 }
 
 .user-information__title {
@@ -18,10 +49,32 @@
   line-height: 48px;
   font-weight: 900;
   padding-top: 15px;
+
+  @include desktop {
+    padding-top: 3px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @include tablets {
+    padding-top: 5px;
+    padding-right: 100px;
+  }
 }
 
 .user-information__about-developer {
   padding-top: 27px;
+
+  @include desktop {
+    padding-top: 45px;
+    line-height: 24px;
+  }
+
+  @include tablets {
+    line-height: 24px;
+    padding-top: 39px;
+    padding-right: 10px;
+  }
 }
 
 .user-information__about-site {
@@ -30,7 +83,7 @@
   font-weight: 300;
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     left: -53px;
@@ -40,5 +93,26 @@
     background-image: url("~images/content/star.png");
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  @include desktop {
+    padding-top: 36px;
+    line-height: 24px;
+    padding-right: 15px;
+
+    &::before {
+      top: 35px;
+      left: -40px;
+    }
+  }
+
+  @include tablets {
+    padding-top: 40px;
+    padding-right: 20px;
+
+    &::before {
+      top: 40px;
+      left: -40px;
+    }
   }
 }

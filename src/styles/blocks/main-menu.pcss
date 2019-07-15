@@ -1,12 +1,7 @@
 .main-menu__list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 3px;
   padding-left: 55px;
-
-  @include desktop {
-    display: none;
-  }
 }
 
 .main-menu__item {
@@ -14,25 +9,86 @@
 }
 
 .main-menu__link {
+  position: relative;
   text-decoration: none;
   padding-bottom: 20px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #5400f3;
+    bottom: 0;
+    right: 0;
+    left: -10%;
+    transition: all 0.3s;
+  }
 
-  &:focus {
-    outline: none;
+  &:active,
+  &:hover {
     color: #5400f3;
-    border-bottom: 1px solid #5400f3;
+    transition: color 0.3s;
+    &::after {
+      width: 120%;
+    }
+  }
+}
+
+.main-menu--header {
+  @include desktop {
+    display: none;
   }
 }
 
 .main-menu--footer {
   color: #fff;
+  line-height: 20px;
 
   .main-menu__list {
-    padding-top: 0;
     padding-left: 0;
   }
-
   .main-menu__item:nth-child(6) {
     padding-right: 0;
+  }
+
+  @include desktop {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 41px;
+  }
+}
+
+.main-menu--popap {
+  .main-menu__list {
+    flex-direction: column;
+    padding-top: 200px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .main-menu__item {
+    padding-top: 27px;
+    padding-left: 13px;
+  }
+
+  @include tablets {
+    .main-menu__list {
+      padding-top: 160px;
+      margin-right: 50px;
+    }
+  }
+}
+
+.main-menu__link--active {
+  color: #5400f3;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 120%;
+    height: 2px;
+    background: #5400f3;
+    bottom: 0;
+    right: 0;
+    left: -10%;
+    transition: all 0.3s;
   }
 }

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --mode=development --hot",
     "build": "rm -rf dist && webpack --mode=production --progress",
-    "reg": "node reg-util.js"
+    "reg": "node reg-util.js",
+    "stylelint": "stylelint src/styles/**/*.pcss"
   },
   "keywords": [],
   "author": "",
@@ -50,12 +51,17 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "flickity": "^2.2.1",
     "normalize.css": "^8.0.1",
     "promptly": "^3.0.3",
     "pug": "^2.0.3",
     "request": "^2.88.0",
     "signale": "^1.4.0",
+    "stylelint": "^10.1.0",
     "vue": "^2.6.7",
-    "vue-router": "^3.0.2"
+    "vue-flickity": "^1.1.2",
+    "vue-router": "^3.0.2",
+    "vue-vuelidate-jsonschema": "^0.13.4",
+    "vuelidate": "^0.7.4"
   }
 }

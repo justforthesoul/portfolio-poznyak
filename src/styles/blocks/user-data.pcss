@@ -1,25 +1,95 @@
 .user-data {
-    width: 290px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-basis: 40%;
+  padding-right: 35px;
+
+  @include desktopHd {
+    flex-basis: 30%;
+    padding-right: 5px;
+  }
+
+  @include desktop {
+    padding-right: 0;
+  }
+
+  @include tablets {
+    justify-content: center;
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+}
+
+.user-data__pic {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 32px;
+  margin-top: 3px;
+  flex-basis: 100%;
+
+  @include desktop {
+    margin-right: 62px;
+  }
+
+  @include tablets {
+    justify-content: center;
+    margin-right: 55px;
+  }
 }
 
 .user-data__img {
-    border-radius: 50%;
-    margin-left: 77px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px 10px rgba(#000, 0.05);
+
+  @include desktop {
     margin-top: 5px;
+    width: 170px;
+    height: 170px;
+  }
 }
 
 .user-data__table {
-    padding-top: 58px;
+  padding-top: 59px;
+  
+  @include desktop {
+    padding-top: 46px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+    padding-top: 40px;
+  }
+
+  @include tablets {
+    padding-top: 18px;
+  }
 }
 
 .user-data__table-title {
-    padding-top: 15px;
-    font-weight: 600;
-    color: #c3c5d0;
+  padding-top: 15px;
+  font-weight: 600;
+  color: #c3c5d0;
+
+  @include desktop {
+    padding-top: 6px;
+  }
 }
 
 .user-data__table-discription {
-    padding-top: 15px;
-    padding-left: 73px;
+  padding-top: 15px;
+  padding-left: 75px;
+  font-weight: 600;
+
+  @include desktop {
+    padding-top: 7px;
+    padding-left: 31px;
     font-weight: 600;
+  }
+
+  @include tablets {
+    padding-left: 55px;
+  }
 }

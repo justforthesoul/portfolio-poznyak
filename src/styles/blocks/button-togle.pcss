@@ -1,0 +1,76 @@
+.button-toggle {
+  position: absolute;
+  top: 37.5px;
+  right: 50px;
+
+  @include tablets {
+    right: 0;
+  }
+}
+
+.button-toggle__wrapper {
+  display: none;
+
+  @include desktop {
+    position: absolute;
+    width: 24px;
+    height: 20px;
+    z-index: 2;
+    display: block;
+  }
+
+  @include tablets {
+    right: 30px;
+  }
+}
+
+.button-toggle__btn {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  outline: none;
+  background: transparent;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  color: #414c63;
+  font-size: 0;
+
+  transition: all 0.25s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background: currentColor;
+
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease-in-out;
+  }
+}
+
+.button-toggle__btn:hover,
+.button-toggle__btn:focus {
+  color: #5400f2;
+}
+
+.button-toggle__btn--active {
+  border-color: transparent;
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

@@ -1,9 +1,19 @@
-.form {
+.form__wrapper {
   padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 875px;
+  max-width: 875px;
+
+  @include desktopHd {
+    padding-left: 32px;
+  }
+
+  @include desktop {
+    justify-content: space-around;
+    padding-top: 35px;
+    padding-left: 0;
+  }
 }
 
 .form__present-wrapper {
@@ -12,6 +22,40 @@
   display: flex;
   flex-wrap: wrap;
   padding-right: 10px;
+
+  .form__input {
+    background-image: svg-load("user.svg", fill=rgba(#000, 0.2));
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 3px 18px;
+    transition: all 0.5s;
+
+    &:hover,
+    &:focus {
+      background-image: svg-load("user.svg", fill=rgba(#5500f2, 1));
+      transition: all 0.5s;
+
+      @include desktop {
+        background: none;
+      }
+    }
+
+    @include desktop {
+      background: none;
+    }
+  }
+
+  @include desktop {
+    padding-right: 10px;
+    padding-left: 4px;
+    flex-basis: 50%;
+  }
+
+  @include tablets {
+    flex-basis: 100%;
+    padding-right: 5px;
+    padding-left: 10px;
+  }
 }
 
 .form__email-wrapper {
@@ -20,6 +64,41 @@
   display: flex;
   flex-wrap: wrap;
   padding-right: 10px;
+
+  .form__input {
+    background-image: svg-load("envelope.svg", fill=rgba(#000, 0.2));
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 3px 18px;
+    transition: all 0.5s;
+
+    &:hover,
+    &:focus {
+      background-image: svg-load("envelope.svg", fill=rgba(#5500f2, 1));
+      transition: all 0.5s;
+
+      @include desktop {
+        background: none;
+      }
+    }
+
+    @include desktop {
+      background: none;
+    }
+  }
+
+  @include desktop {
+    padding-right: 4px;
+    padding-left: 10px;
+    flex-basis: 50%;
+  }
+
+  @include tablets {
+    flex-basis: 100%;
+    padding-right: 5px;
+    padding-left: 10px;
+    padding-top: 25px;
+  }
 }
 
 .form__message-wrapper {
@@ -30,9 +109,50 @@
   padding-right: 9px;
   padding-top: 32px;
 
+  .form__input {
+    background-image: svg-load("message.svg", fill=rgba(#000, 0.2));
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 3px 20px;
+    transition: all 0.5s;
+
+    &:hover,
+    &:focus {
+      background-image: svg-load("message.svg", fill=rgba(#5500f2, 1));
+      transition: all 0.5s;
+
+      @include desktop {
+        background: none;
+      }
+    }
+
+    @include desktop {
+      background: none;
+    }
+  }
+
+  @include desktop {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
   .form__input[placeholder] {
     padding-right: 370px;
     line-height: 35px;
+
+    @include desktop {
+      line-height: 25px;
+      padding-right: 270px;
+      padding-top: 8px;
+      padding-bottom: 15px;
+    }
+
+    @include tablets {
+      line-height: 25px;
+      padding-right: 0;
+      padding-top: 22px;
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -43,38 +163,27 @@
   font-size: 16px;
   line-height: 30px;
   font-weight: 600;
-}
+  cursor: pointer;
 
-.form__icon {
-  position: absolute;
-  fill: #c4c8d0;
-  top: 45px;
-  transition: fill 0.3s;
-}
-
-.form__icon--message {
-  top: 83px;
-}
-
-.form__present-input,
-.form__email-input,
-.form__message {
-  border: none;
-  border-bottom: 1px solid #414c63;
-  flex-basis: 100%;
+  @include desktop {
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 
 .form__input {
   border: none;
-  border-bottom: 1px solid #414c63;
+  border-bottom: 2px solid #414c63;
   flex-basis: 100%;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
 
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid #5500f2;
-    transition: border-bottom 0.3s;
+  &:focus,
+  &:hover {
+    border-bottom: 2px solid #5500f2;
+    transition: all 0.5s;
   }
 }
 
@@ -86,10 +195,14 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+
+  @include desktop {
+    font-size: 14px;
+    padding-bottom: 12px;
+  }
 }
 
 .form__send-btn {
-  outline: none;
   margin-top: 60px;
   text-transform: uppercase;
   color: #fff;
@@ -101,36 +214,37 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 37px;
   border-bottom-left-radius: 6px;
-}
 
-.form__input {
-  border: none;
-  border-bottom: 1px solid #414c63;
-  flex-basis: 100%;
-  background-color: transparent;
-  outline: none;
+  @include desktop {
+    margin-top: 33px;
+  }
 
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid #5500f2;
-    transition: border-bottom 0.3s;
+  @include tablets {
+    margin-top: 30px;
+    font-size: 16px;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 27px;
+    border-bottom-left-radius: 0;
+    padding: 21px 80px;
   }
 }
 
-.form__present-wrapper .form__input:hover + .form__icon,
-.form__present-wrapper .form__input:focus + .form__icon {
-    fill: #5500f2;
-    transition: fill 0.3s;
+.js-error-block {
+  display: none;
 }
 
-.form__email-wrapper .form__input:hover + .form__icon,
-.form__email-wrapper .form__input:focus + .form__icon {
-    fill: #5500f2;
-    transition: fill 0.3s;
+.js-has-error {
+  display: block;
 }
 
-.form__message-wrapper .form__input:hover + .form__icon,
-.form__message-wrapper .form__input:focus + .form__icon {
-    fill: #5500f2;
-    transition: fill 0.3s;
+.form__error {
+  position: absolute;
+  bottom: -36px;
+  left: 35px;
+  padding: 15px 10px 9px 10px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #cd1515;
+  clip-path: polygon(50% 0, 55% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%, 45% 20%);;
 }

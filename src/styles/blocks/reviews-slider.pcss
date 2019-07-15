@@ -1,0 +1,219 @@
+.reviews-slider {
+  position: relative;
+}
+
+.reviews-slider__list {
+  max-width: 1005px;
+
+  @include desktop {
+    max-width: 800px;
+  }
+
+  @include tablets {
+    max-width: 500px;
+  }
+}
+
+.reviews-slider__item {
+  width: 50%;
+  min-height: 310px;
+  display: flex;
+  align-items: stretch;
+
+  @include desktop {
+    padding-left: 40px;
+    padding-right: 10px;
+    min-height: 250px;
+  }
+
+  @include tablets {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 265px;
+  }
+}
+
+.reviews-slider__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 95px;
+  padding-left: 130px;
+  padding-right: 20px;
+  position: relative;
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 60px;
+  }
+
+  @include tablets {
+    margin-top: 95px;
+    padding-left: 10px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 75px;
+    opacity: 0.03;
+    background: svg-load("quote.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 25px;
+
+    @include desktop {
+      background: none;
+    }
+  }
+}
+
+.reviews-slider__blockquote {
+  font-size: 16px;
+  line-height: 29px;
+  font-weight: 600;
+  opacity: 0.5;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-weight: 700;
+  }
+}
+
+.reviews-slider__info {
+  display: flex;
+  font-size: 18px;
+  align-self: flex-end;
+}
+
+.reviews-slider__avatar-img {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @include tablets {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.reviews-slider__person-description {
+  padding-left: 31px;
+  padding-top: 7px;
+
+  @include desktop {
+    padding-left: 20px;
+  }
+
+  @include tablets {
+    padding-top: 2px;
+  }
+}
+
+.reviews-slider__name {
+  font-weight: 700;
+
+  @include tablets {
+    font-size: 16px;
+  }
+}
+
+.reviews-slider__text {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.5;
+  padding-top: 13px;
+
+  @include tablets {
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 3px;
+  }
+}
+
+.reviews-slider__buttons {
+  position: absolute;
+  top: -46px;
+  left: 545px;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  @include desktopHd {
+    left: 578px;
+  }
+
+  @include desktop {
+    left: 461px;
+  }
+
+  @include tablets {
+    top: 20px;
+    left: 51.5%;
+  }
+}
+
+.reviews-slider__btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid "text-color";
+  position: relative;
+  border-radius: 50%;
+  margin-right: 30px;
+  outline: none;
+  &:focus,
+  &:hover {
+    border: 1px solid #5400f2;
+    &::before {
+      background-image: svg-load("arrow-down.svg", fill=#5400f2);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &::before {
+    content: "";
+    width: 8px;
+    height: 10px;
+    display: block;
+    background-image: svg-load("arrow-down.svg", fill=text-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &:focus,
+    &:hover {
+      background-image: svg-load("arrow-down.svg", fill=rgba(#5400f2, 1));
+    }
+  }
+  &_prev {
+    &::before {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}
+
+.vue-disabled {
+  border: 1px solid "text-color";
+  opacity: 0.3;
+  &:focus,
+  &:hover {
+    border: 1px solid "text-color";
+    opacity: 0.3;
+    &::before {
+      background-image: svg-load("arrow-down.svg", fill=transperent);
+    }
+  }
+}
