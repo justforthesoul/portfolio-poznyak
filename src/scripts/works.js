@@ -15,7 +15,17 @@ const thumbs = {
   props: {
     works: Array,
     currentWork: Object
-  }
+  },
+  methods: {
+    console() {
+      const thumb = this.$refs["thumb"];
+      const style = getComputedStyle(thumb[0]).getPropertyValue("transform");
+      console.log(style);
+    }
+  },
+  mounted() {
+    this.console();
+  },
 };
 
 const display = {

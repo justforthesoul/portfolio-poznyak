@@ -39,6 +39,7 @@ script(type="text/x-template")#slider-thumbs
   .works-slider__thumbs-wrapper
     ul.works-slider__thumbs
       li.works-slider__thumb-item(
+        ref=("thumb")
         v-for="work in works" :key="work.id"
         :class="{active: currentWork.id === work.id }"
       )
