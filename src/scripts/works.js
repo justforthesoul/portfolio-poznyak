@@ -1,15 +1,21 @@
 import Vue from "vue";
 
+const btns = {
+  template: "#slider-btns",
+  props: {
+    isDisabledNext: Boolean,
+    isDisabledPrev: Boolean,
+    works: Array,
+    currentIndex: Number
+  }
+};
+
 const thumbs = {
   template: "#slider-thumbs",
   props: {
     works: Array,
     currentWork: Object
   }
-};
-
-const btns = {
-  template: "#slider-btns"
 };
 
 const display = {
@@ -21,7 +27,9 @@ const display = {
   props: {
     works: Array,
     currentWork: Object,
-    currentIndex: Number
+    currentIndex: Number,
+    isDisabledNext: Boolean,
+    isDisabledPrev: Boolean
   },
   computed: {
     reversedWorks() {
@@ -63,7 +71,9 @@ new Vue({
   data() {
     return {
       works: [],
-      currentIndex: 0
+      currentIndex: 0,
+      isDisabledNext: false,
+      isDisabledPrev: true
     };
   },
   computed: {
@@ -73,14 +83,22 @@ new Vue({
   },
   watch: {
     currentIndex(value) {
-      this.makeInfiniteLoopForCurIndex(value);
+      this.makeDisabledBtnForCurIndex(value);
     }
   },
   methods: {
-    makeInfiniteLoopForCurIndex(value) {
-      const worksAmount = this.works.length - 1;
-      if (value > worksAmount) this.currentIndex = 0;
-      if (value < 0) this.currentIndex = worksAmount;
+    makeDisabledBtnForCurIndex(value) {
+      if (value > 0) {
+        this.isDisabledPrev = false;
+      } else {
+        this.isDisabledPrev = true;
+      }
+
+      if (value == this.works.length - 1) {
+        this.isDisabledNext = true
+      } else {
+        this.isDisabledNext = false
+      }
     },
     makeArrWithRequiredImages(data) {
       return data.map(item => {

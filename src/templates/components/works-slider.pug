@@ -3,7 +3,9 @@ script(type="text/x-template")#slider-container
     display(
       :works="works",
       :currentWork="currentWork",
-      :currentIndex="currentIndex"
+      :currentIndex="currentIndex",
+      :isDisabledNext="isDisabledNext",
+      :isDisabledPrev="isDisabledPrev"
       @slide="handleSlide"
     )
     info(
@@ -22,14 +24,16 @@ script(type="text/x-template")#slider-display
         )
       btns(
         @slide="direction => $emit('slide', direction)"
+        :isDisabledNext="isDisabledNext",
+        :isDisabledPrev="isDisabledPrev"
       )
 
 script(type="text/x-template")#slider-btns
   .works-slider__buttons
     .works-slider__btn-wrapper
-      button(type="button" @click.prevent="$emit('slide', 'next')").works-slider__btn.works-slider__btn_next
+      button(type="button" @click.prevent="$emit('slide', 'next')" :disabled='isDisabledNext').works-slider__btn.works-slider__btn_next
     .works-slider__btn-wrapper
-      button(type="button" @click.prevent="$emit('slide', 'prev')").works-slider__btn.works-slider__btn_prev
+      button(type="button" @click.prevent="$emit('slide', 'prev')" :disabled='isDisabledPrev').works-slider__btn.works-slider__btn_prev
 
 script(type="text/x-template")#slider-thumbs
   .works-slider__thumbs-wrapper
