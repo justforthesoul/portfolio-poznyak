@@ -13,9 +13,7 @@ const skill = {
         getComputedStyle(circle).getPropertyValue("stroke-dasharray")
       );
       const percent = (dashArray / 100) * (100 - this.skillPercent);
-
       let startPersent = 270;
-
       let time = (dashArray * 8) / this.skillPercent;
 
       window.addEventListener("scroll", () => {
