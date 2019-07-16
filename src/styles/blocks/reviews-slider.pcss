@@ -205,6 +205,20 @@
   }
 }
 
+.reviews-slider__btn:disabled {
+  &::before {
+    background-image: svg-load("arrow-down.svg", fill=rgba(#000, 0.5));
+  }
+
+  &:focus,
+  &:hover {
+    border: 1px solid rgba(#000, 0.5);
+    &::before {
+      background-image: svg-load("arrow-down.svg", fill=rgba(#000, 0.5));
+    }
+  }
+}
+
 .vue-disabled {
   border: 1px solid "text-color";
   opacity: 0.3;

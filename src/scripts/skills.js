@@ -21,7 +21,7 @@ const skill = {
         let topSkillsContainer =
           this.$root.$refs["skill-container"].getBoundingClientRect().top +
           offset -
-          350;
+          400;
         if (offset >= topSkillsContainer) {
           setInterval(function() {
             if (startPersent >= percent) {
