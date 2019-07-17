@@ -25,7 +25,7 @@ const thumbs = {
   },
   mounted() {
     this.console();
-  },
+  }
 };
 
 const display = {
@@ -38,6 +38,7 @@ const display = {
     works: Array,
     currentWork: Object,
     currentIndex: Number,
+    index: Number,
     isDisabledNext: Boolean,
     isDisabledPrev: Boolean
   },
@@ -82,6 +83,7 @@ new Vue({
     return {
       works: [],
       currentIndex: 0,
+      index: 0,
       isDisabledNext: false,
       isDisabledPrev: true
     };
@@ -92,8 +94,8 @@ new Vue({
     }
   },
   watch: {
-    currentIndex(value) {
-      this.makeDisabledBtnForCurIndex(value);
+    index(index) {
+      this.makeDisabledBtnForCurIndex(index);
     }
   },
   methods: {
@@ -105,9 +107,9 @@ new Vue({
       }
 
       if (value == this.works.length - 1) {
-        this.isDisabledNext = true
+        this.isDisabledNext = true;
       } else {
-        this.isDisabledNext = false
+        this.isDisabledNext = false;
       }
     },
     makeArrWithRequiredImages(data) {
@@ -121,14 +123,18 @@ new Vue({
     handleSlide(direction) {
       switch (direction) {
         case "next":
-          this.currentIndex++;
+          const lastSlide = this.works.pop();
+          this.works.unshift(lastSlide);
+          this.index++;
           break;
         case "prev":
-          this.currentIndex--;
+          const firstSlide = this.works.shift();
+          this.works.push(firstSlide);
+          this.index--;
           break;
       }
     }
-  }, 
+  },
   created() {
     const data = require("../data/works.json");
     this.works = this.makeArrWithRequiredImages(data);

@@ -4,8 +4,9 @@ script(type="text/x-template")#slider-container
       :works="works",
       :currentWork="currentWork",
       :currentIndex="currentIndex",
+      :index="index",
       :isDisabledNext="isDisabledNext",
-      :isDisabledPrev="isDisabledPrev"
+      :isDisabledPrev="isDisabledPrev",
       @slide="handleSlide"
     )
     info(
@@ -13,13 +14,13 @@ script(type="text/x-template")#slider-container
     )
 
 script(type="text/x-template")#slider-display
-  .works-slider__pictures(:data-slide="currentIndex + 1")
+  .works-slider__pictures(:data-slide="index + 1")
     .works-slider__container
       .works-slider__fullpic-container
         .works-slider__fullpic-wrapper
           img(:src="currentWork.photo").works-slider__fullpic-img
         thumbs(
-          :works="reversedWorks"
+          :works="reversedWorks",
           :currentWork="currentWork"
         )
       btns(
