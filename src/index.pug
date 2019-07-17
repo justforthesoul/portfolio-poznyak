@@ -9,7 +9,12 @@ html(lang="ru")
     meta(name="Description", content="Разработка сайтов")
     title Portfolio | main page
   body
-    .wrapper#main-header
+    .wrapper.loading#main-header
+      .cssload
+        .cssload__wrapper
+          .cssload__inner.cssload__inner--one
+          .cssload__inner.cssload__inner--two
+          .cssload__inner.cssload__inner--three
       .maincontent
         include components/parallax-mountain
         include components/header
