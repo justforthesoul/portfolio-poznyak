@@ -246,5 +246,23 @@
   color: #fff;
   font-weight: 600;
   background-color: #cd1515;
-  clip-path: polygon(50% 0, 55% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%, 45% 20%);;
+  clip-path: polygon(
+    50% 0,
+    55% 20%,
+    100% 20%,
+    100% 100%,
+    0 100%,
+    0 20%,
+    45% 20%
+  );
+}
+
+.form__input::placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.form__input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
