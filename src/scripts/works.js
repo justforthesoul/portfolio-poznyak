@@ -1,15 +1,31 @@
 import Vue from "vue";
 
+const btns = {
+  template: "#slider-btns",
+  props: {
+    isDisabledNext: Boolean,
+    isDisabledPrev: Boolean,
+    works: Array,
+    currentIndex: Number
+  }
+};
+
 const thumbs = {
   template: "#slider-thumbs",
   props: {
     works: Array,
     currentWork: Object
+  },
+  methods: {
+    console() {
+      const thumb = this.$refs["thumb"];
+      const style = getComputedStyle(thumb[0]).getPropertyValue("transform");
+      console.log(style);
+    }
+  },
+  mounted() {
+    this.console();
   }
-};
-
-const btns = {
-  template: "#slider-btns"
 };
 
 const display = {
@@ -21,7 +37,10 @@ const display = {
   props: {
     works: Array,
     currentWork: Object,
-    currentIndex: Number
+    currentIndex: Number,
+    index: Number,
+    isDisabledNext: Boolean,
+    isDisabledPrev: Boolean
   },
   computed: {
     reversedWorks() {
@@ -63,7 +82,10 @@ new Vue({
   data() {
     return {
       works: [],
-      currentIndex: 0
+      currentIndex: 0,
+      index: 0,
+      isDisabledNext: false,
+      isDisabledPrev: true
     };
   },
   computed: {
@@ -72,15 +94,23 @@ new Vue({
     }
   },
   watch: {
-    currentIndex(value) {
-      this.makeInfiniteLoopForCurIndex(value);
+    index(index) {
+      this.makeDisabledBtnForCurIndex(index);
     }
   },
   methods: {
-    makeInfiniteLoopForCurIndex(value) {
-      const worksAmount = this.works.length - 1;
-      if (value > worksAmount) this.currentIndex = 0;
-      if (value < 0) this.currentIndex = worksAmount;
+    makeDisabledBtnForCurIndex(value) {
+      if (value > 0) {
+        this.isDisabledPrev = false;
+      } else {
+        this.isDisabledPrev = true;
+      }
+
+      if (value == this.works.length - 1) {
+        this.isDisabledNext = true;
+      } else {
+        this.isDisabledNext = false;
+      }
     },
     makeArrWithRequiredImages(data) {
       return data.map(item => {
@@ -93,14 +123,18 @@ new Vue({
     handleSlide(direction) {
       switch (direction) {
         case "next":
-          this.currentIndex++;
+          const lastSlide = this.works.pop();
+          this.works.unshift(lastSlide);
+          this.index++;
           break;
         case "prev":
-          this.currentIndex--;
+          const firstSlide = this.works.shift();
+          this.works.push(firstSlide);
+          this.index--;
           break;
       }
     }
-  }, 
+  },
   created() {
     const data = require("../data/works.json");
     this.works = this.makeArrWithRequiredImages(data);

@@ -1,5 +1,5 @@
 script(type="text/x-template")#skills-list
-    ul.skills
+    ul.skills(ref="skill-container")
         li.skills__item(v-for="skill in skills")
             row(
                 :skill="skill"
